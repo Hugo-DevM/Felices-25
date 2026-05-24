@@ -396,6 +396,240 @@ function Scene2() {
   );
 }
 
+function ScenePlan() {
+  return (
+    <svg viewBox="0 0 400 260" className="w-full">
+      <rect width={400} height={260} fill="#fdf4ff" />
+      <rect
+        x={0}
+        y={225}
+        width={400}
+        height={35}
+        fill="#e9d5ff"
+        opacity={0.4}
+      />
+
+      <Boy x={85} y={218} size={0.95} />
+
+      <circle
+        cx={102}
+        cy={172}
+        r={4}
+        fill="white"
+        stroke="#c084fc"
+        strokeWidth={1.5}
+      />
+      <circle
+        cx={116}
+        cy={157}
+        r={6}
+        fill="white"
+        stroke="#c084fc"
+        strokeWidth={1.5}
+      />
+      <circle
+        cx={134}
+        cy={140}
+        r={9}
+        fill="white"
+        stroke="#c084fc"
+        strokeWidth={1.5}
+      />
+
+      <rect
+        x={145}
+        y={38}
+        width={228}
+        height={108}
+        rx={18}
+        fill="white"
+        stroke="#c084fc"
+        strokeWidth={2}
+      />
+
+      <rect x={162} y={58} width={46} height={34} rx={4} fill="#1c1917" />
+      <rect x={162} y={58} width={46} height={10} rx={4} fill="#374151" />
+      <line
+        x1={171}
+        y1={58}
+        x2={167}
+        y2={68}
+        stroke="#fbbf24"
+        strokeWidth={2}
+      />
+      <line
+        x1={181}
+        y1={58}
+        x2={177}
+        y2={68}
+        stroke="#fbbf24"
+        strokeWidth={2}
+      />
+      <line
+        x1={191}
+        y1={58}
+        x2={187}
+        y2={68}
+        stroke="#fbbf24"
+        strokeWidth={2}
+      />
+      <line
+        x1={201}
+        y1={58}
+        x2={197}
+        y2={68}
+        stroke="#fbbf24"
+        strokeWidth={2}
+      />
+      <text x={185} y={84} textAnchor="middle" fontSize={8} fill="white">
+        Cine
+      </text>
+
+      <line
+        x1={215}
+        y1={77}
+        x2={232}
+        y2={77}
+        stroke="#c084fc"
+        strokeWidth={2}
+      />
+      <polygon points="232,72 242,77 232,82" fill="#c084fc" />
+
+      <polygon points="252,62 285,62 285,92 252,92" fill="#fef08a" />
+      <polygon points="247,65 268,46 289,65" fill="#ef4444" />
+      <rect x={263} y={76} width={11} height={16} rx={2} fill="#a16207" />
+
+      <line
+        x1={292}
+        y1={77}
+        x2={309}
+        y2={77}
+        stroke="#c084fc"
+        strokeWidth={2}
+      />
+      <polygon points="309,72 319,77 309,82" fill="#c084fc" />
+
+      <Heart x={342} y={72} size={2.2} color="#f43f5e" />
+
+      <motion.text
+        x={259}
+        y={132}
+        textAnchor="middle"
+        fontSize={11}
+        fill="#7c3aed"
+        fontStyle="italic"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.7 }}
+      >
+        mi plan malévolo 😈
+      </motion.text>
+
+      <text
+        x={80}
+        y={240}
+        textAnchor="middle"
+        fontSize={9}
+        fill="#92400e"
+        fontWeight="bold"
+      >
+        Yo
+      </text>
+    </svg>
+  );
+}
+
+function SceneRealization() {
+  return (
+    <svg viewBox="0 0 400 260" className="w-full">
+      <rect width={400} height={260} fill="#fce7f3" />
+      <rect
+        x={0}
+        y={225}
+        width={400}
+        height={35}
+        fill="#fbcfe8"
+        opacity={0.5}
+      />
+
+      <Boy x={88} y={218} size={0.92} />
+      <Girl x={308} y={218} size={0.92} flipped />
+      <rect x={284} y={170} width={26} height={44} rx={5} fill="#1c1917" />
+      <rect x={287} y={173} width={20} height={33} rx={3} fill="#e0e7ff" />
+      <rect
+        x={290}
+        y={177}
+        width={11}
+        height={11}
+        rx={3}
+        fill="none"
+        stroke="#e11d48"
+        strokeWidth={1.5}
+      />
+      <circle
+        cx={295}
+        cy={182}
+        r={2.5}
+        fill="none"
+        stroke="#e11d48"
+        strokeWidth={1.2}
+      />
+      <circle cx={300} cy={178} r={1} fill="#e11d48" />
+      <motion.g
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.6, duration: 0.5, type: "spring" }}
+        style={{ transformOrigin: "178px 108px" }}
+      >
+        <rect x={18} y={48} width={252} height={96} rx={14} fill="#fda4af" />
+        <polygon points="270,108 289,102 270,122" fill="#fda4af" />
+        <text
+          x={144}
+          y={72}
+          textAnchor="middle"
+          fontSize={10.5}
+          fill="white"
+          fontWeight="bold"
+        >
+          Ahora todo tiene sentido
+        </text>
+        <text
+          x={144}
+          y={88}
+          textAnchor="middle"
+          fontSize={10.5}
+          fill="white"
+          fontWeight="bold"
+        >
+          jajajaja 😂
+        </text>
+        <text
+          x={144}
+          y={104}
+          textAnchor="middle"
+          fontSize={10.5}
+          fill="white"
+          fontWeight="bold"
+        >
+          tú no querias ser mi amiguillo
+        </text>
+      </motion.g>
+      <motion.text
+        x={108}
+        y={165}
+        fontSize={22}
+        textAnchor="middle"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.5, duration: 0.5, type: "spring" }}
+        style={{ transformOrigin: "108px 165px" }}
+      >
+        😅
+      </motion.text>
+    </svg>
+  );
+}
+
 function Scene3() {
   return (
     <svg viewBox="0 0 400 260" className="w-full">
@@ -421,8 +655,8 @@ function Scene3() {
           />
         );
       })}
-      <ellipse cx={115} cy={270} rx={145} ry={115} fill="#86efac" />
-      <ellipse cx={295} cy={275} rx={145} ry={115} fill="#4ade80" />
+      <ellipse cx={108} cy={288} rx={112} ry={152} fill="#86efac" />
+      <ellipse cx={302} cy={292} rx={115} ry={168} fill="#4ade80" />
       <rect x={0} y={238} width={400} height={22} fill="#22c55e" />
       <motion.g
         initial={{ x: -30, y: 10 }}
@@ -445,7 +679,7 @@ function Scene3() {
           <circle cx={0} cy={-7} r={5} fill="#c084fc" />
         </g>
       </motion.g>
-      <Girl x={298} y={168} size={0.9} flipped />
+      <Girl x={302} y={127} size={0.9} flipped />
       <text
         x={80}
         y={240}
@@ -457,8 +691,8 @@ function Scene3() {
         Yo
       </text>
       <text
-        x={308}
-        y={190}
+        x={312}
+        y={148}
         textAnchor="middle"
         fontSize={9}
         fill="#14532d"
@@ -870,9 +1104,25 @@ const SCENES = [
   },
   {
     id: 2,
+    Component: ScenePlan,
+    bg: "from-purple-50 to-fuchsia-100",
+    text: "La invité al cine... pero tenía un plan malévolo: al llevarla a su casa después de la película, darle un besito. 😈",
+    dark: false,
+    duration: 13000,
+  },
+  {
+    id: 3,
+    Component: SceneRealization,
+    bg: "from-pink-50 to-rose-100",
+    text: 'Pero se dio cuenta de que me encantaba esa mujer y arruino mi plan malévolo: "Ahora todo tiene sentido jajajaja, tú no querias ser mi amiguillo." 💀 - Efectivamente tenia razón',
+    dark: false,
+    duration: 13000,
+  },
+  {
+    id: 4,
     Component: Scene3,
     bg: "from-green-50 to-emerald-100",
-    text: "La invité al cine. Fui por ella con un ramo de flores, pero para llegar a su casa había que subir 2 cerritos.",
+    text: "Fui por ella con un ramo de flores. Para llegar a su casa había dos subidas bien empinadas — subías una y en seguida venía la otra.",
     dark: false,
     duration: 14000,
   },
@@ -919,11 +1169,36 @@ const SCENES = [
 ];
 
 const TRIBUTE_LINES = [
-  { text: "Que bonito fue...", delay: 0.5, size: "text-2xl md:text-3xl", color: "text-rose-400" },
-  { text: "cada momento contigo.", delay: 1.5, size: "text-2xl md:text-3xl", color: "text-rose-400" },
-  { text: "Feliz Cumpleaños", delay: 3, size: "text-5xl md:text-6xl font-cursive", color: "text-rose-500" },
-  { text: "Litzy", delay: 4, size: "text-6xl md:text-7xl font-cursive", color: "text-fuchsia-400" },
-  { text: "Que este día sea tan especial como tú. 🌸", delay: 5.5, size: "text-base md:text-lg", color: "text-rose-500/80" },
+  {
+    text: "Que bonito fue...",
+    delay: 0.5,
+    size: "text-2xl md:text-3xl",
+    color: "text-rose-400",
+  },
+  {
+    text: "cada momento contigo.",
+    delay: 1.5,
+    size: "text-2xl md:text-3xl",
+    color: "text-rose-400",
+  },
+  {
+    text: "Feliz Cumpleaños",
+    delay: 3,
+    size: "text-5xl md:text-6xl font-cursive",
+    color: "text-rose-500",
+  },
+  {
+    text: "Litzy",
+    delay: 4,
+    size: "text-6xl md:text-7xl font-cursive",
+    color: "text-fuchsia-400",
+  },
+  {
+    text: "Que este día sea tan especial como tú. 🌸",
+    delay: 5.5,
+    size: "text-base md:text-lg",
+    color: "text-rose-500/80",
+  },
 ];
 
 const FLOATING_ITEMS = [
@@ -938,7 +1213,9 @@ const FLOATING_ITEMS = [
 ];
 
 function Tribute({ onConfetti }: { onConfetti: () => void }) {
-  useEffect(() => { onConfetti(); }, [onConfetti]);
+  useEffect(() => {
+    onConfetti();
+  }, [onConfetti]);
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -950,7 +1227,12 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
           className="absolute text-2xl sm:text-3xl select-none pointer-events-none"
           style={{ left: `${f.x}%`, bottom: "-2rem" }}
           animate={{ y: [0, -900] }}
-          transition={{ duration: f.dur, delay: f.delay, repeat: Infinity, ease: "linear" }}
+          transition={{
+            duration: f.dur,
+            delay: f.delay,
+            repeat: Infinity,
+            ease: "linear",
+          }}
         >
           {f.emoji}
         </motion.div>
@@ -959,7 +1241,11 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
       <motion.div
         className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center"
         animate={{ opacity: [0, 1, 1, 0] }}
-        transition={{ duration: 10, times: [0, 0.1, 0.75, 1], ease: "easeInOut" }}
+        transition={{
+          duration: 10,
+          times: [0, 0.1, 0.75, 1],
+          ease: "easeInOut",
+        }}
       >
         {TRIBUTE_LINES.map((line, i) => (
           <motion.p
@@ -996,7 +1282,10 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 13, duration: 1 }}
       >
-        <Link href="/" className="text-rose-400 hover:text-rose-600 underline text-sm">
+        <Link
+          href="/"
+          className="text-rose-400 hover:text-rose-600 underline text-sm"
+        >
           ← Volver al inicio
         </Link>
       </motion.div>
@@ -1125,23 +1414,48 @@ export default function HistoriaPage() {
                 />
               ))}
             </div>
-
           </motion.div>
         )}
       </AnimatePresence>
 
       {current >= SCENES.length && (
-        <Tribute onConfetti={() => {
-          import("canvas-confetti").then(({ default: confetti }) => {
-            const end = Date.now() + 4000;
-            const frame = () => {
-              confetti({ particleCount: 5, angle: 60, spread: 80, origin: { x: 0 }, colors: ["#f9a8d4","#f43f5e","#c084fc","#fb923c","#fbbf24"] });
-              confetti({ particleCount: 5, angle: 120, spread: 80, origin: { x: 1 }, colors: ["#f9a8d4","#f43f5e","#c084fc","#fb923c","#fbbf24"] });
-              if (Date.now() < end) requestAnimationFrame(frame);
-            };
-            frame();
-          });
-        }} />
+        <Tribute
+          onConfetti={() => {
+            import("canvas-confetti").then(({ default: confetti }) => {
+              const end = Date.now() + 4000;
+              const frame = () => {
+                confetti({
+                  particleCount: 5,
+                  angle: 60,
+                  spread: 80,
+                  origin: { x: 0 },
+                  colors: [
+                    "#f9a8d4",
+                    "#f43f5e",
+                    "#c084fc",
+                    "#fb923c",
+                    "#fbbf24",
+                  ],
+                });
+                confetti({
+                  particleCount: 5,
+                  angle: 120,
+                  spread: 80,
+                  origin: { x: 1 },
+                  colors: [
+                    "#f9a8d4",
+                    "#f43f5e",
+                    "#c084fc",
+                    "#fb923c",
+                    "#fbbf24",
+                  ],
+                });
+                if (Date.now() < end) requestAnimationFrame(frame);
+              };
+              frame();
+            });
+          }}
+        />
       )}
     </div>
   );
