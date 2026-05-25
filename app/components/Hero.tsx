@@ -124,28 +124,32 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center max-w-md w-full px-4">
-        {/* Mobile photos */}
-        <motion.div
-          className="md:hidden flex gap-3 justify-center mb-6"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.7, type: "spring" }}
-        >
-          {[HEART_PHOTOS[1], HEART_PHOTOS[4], HEART_PHOTOS[7]].map(
-            (photo, i) => (
+        {/* Mobile photos — 3×3 grid */}
+        <div className="md:hidden grid grid-cols-3 gap-2.5 mb-6 w-full">
+          {HEART_PHOTOS.map((photo, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.15 + i * 0.08,
+                duration: 0.5,
+                type: "spring",
+                stiffness: 130,
+              }}
+            >
               <motion.div
-                key={i}
-                animate={{ y: [0, -6, 0] }}
+                animate={{ y: [0, -5, 0] }}
                 transition={{
                   repeat: Infinity,
-                  duration: 3 + i * 0.5,
+                  duration: 3.2 + i * 0.35,
                   ease: "easeInOut",
-                  delay: i * 0.4,
+                  delay: i * 0.25,
                 }}
-                className="relative w-20 h-20 rounded-full overflow-hidden border-4 shadow-lg flex-shrink-0"
+                className="relative w-full aspect-square rounded-full overflow-hidden border-4 shadow-lg"
                 style={{
                   borderColor: "var(--color-cream)",
-                  boxShadow: "0 4px 20px oklch(32% 0.115 10 / 0.15)",
+                  boxShadow: "0 4px 18px oklch(32% 0.115 10 / 0.14)",
                 }}
               >
                 <Image
@@ -155,9 +159,9 @@ export default function Hero() {
                   className="object-cover"
                 />
               </motion.div>
-            ),
-          )}
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
 
         {/* Name — the hero moment */}
         <motion.h1
