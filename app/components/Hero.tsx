@@ -8,7 +8,7 @@ import Gerbera from "./Gerbera";
 
 const PHRASE = "Que este día sea tan especial como tú ✨";
 
-const EMOJIS = ["🎈", "🎂", "🎉", "✨", "🌸", "💖", "🎀", "⭐"];
+const PETALS = ["🌸", "✨", "🌹", "💗", "🌺", "🎀", "💕", "✿"];
 
 const HEART_PHOTOS = [
   { src: "/photos/1.jpeg", left: "14%", top: "12%" },
@@ -35,25 +35,43 @@ export default function Hero() {
 
   useEffect(() => {
     setFloaters(
-      Array.from({ length: 16 }, (_, i) => ({
+      Array.from({ length: 12 }, (_, i) => ({
         id: i,
-        emoji: EMOJIS[i % EMOJIS.length],
+        emoji: PETALS[i % PETALS.length],
         left: Math.random() * 100,
-        delay: Math.random() * 5,
-        duration: 6 + Math.random() * 6,
+        delay: Math.random() * 6,
+        duration: 8 + Math.random() * 7,
       })),
     );
   }, []);
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 text-center">
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-rose-100 to-fuchsia-200 -z-10" />
+      {/* Warm editorial background */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 140% 90% at 50% 45%, oklch(97.2% 0.013 78) 0%, oklch(91% 0.055 18) 100%)",
+        }}
+      />
+
+      {/* Soft vignette */}
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, oklch(87% 0.045 18 / 0.25) 100%)",
+        }}
+      />
+
+      {/* Floating petals */}
       {floaters.map((f) => (
         <motion.div
           key={f.id}
-          className="absolute text-2xl select-none pointer-events-none"
+          className="absolute text-xl select-none pointer-events-none opacity-60"
           style={{ left: `${f.left}%`, bottom: "-2rem" }}
-          animate={{ y: [0, -1200] }}
+          animate={{ y: [0, -1100] }}
           transition={{
             duration: f.duration,
             delay: f.delay,
@@ -65,6 +83,7 @@ export default function Hero() {
         </motion.div>
       ))}
 
+      {/* Desktop scattered photos */}
       {HEART_PHOTOS.map((photo, i) => (
         <motion.div
           key={i}
@@ -87,7 +106,11 @@ export default function Hero() {
               ease: "easeInOut",
               delay: i * 0.3,
             }}
-            className="relative w-28 h-28 lg:w-36 lg:h-36 rounded-full overflow-hidden border-4 border-white shadow-xl"
+            className="relative w-28 h-28 lg:w-36 lg:h-36 rounded-full overflow-hidden border-4 shadow-xl"
+            style={{
+              borderColor: "var(--color-cream)",
+              boxShadow: "0 8px 32px oklch(32% 0.115 10 / 0.18)",
+            }}
           >
             <Image
               src={photo.src}
@@ -99,9 +122,11 @@ export default function Hero() {
         </motion.div>
       ))}
 
+      {/* Main content */}
       <div className="relative z-10 flex flex-col items-center max-w-md w-full px-4">
+        {/* Mobile photos */}
         <motion.div
-          className="md:hidden flex gap-3 justify-center mb-5"
+          className="md:hidden flex gap-3 justify-center mb-6"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.7, type: "spring" }}
@@ -117,7 +142,11 @@ export default function Hero() {
                   ease: "easeInOut",
                   delay: i * 0.4,
                 }}
-                className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg flex-shrink-0"
+                className="relative w-20 h-20 rounded-full overflow-hidden border-4 shadow-lg flex-shrink-0"
+                style={{
+                  borderColor: "var(--color-cream)",
+                  boxShadow: "0 4px 20px oklch(32% 0.115 10 / 0.15)",
+                }}
               >
                 <Image
                   src={photo.src}
@@ -129,30 +158,67 @@ export default function Hero() {
             ),
           )}
         </motion.div>
+
+        {/* Name — the hero moment */}
         <motion.h1
-          className="font-cursive text-7xl md:text-9xl text-rose-500 drop-shadow-lg"
-          initial={{ opacity: 0, y: -60 }}
+          className="font-cursive leading-none"
+          style={{
+            fontSize: "clamp(5.2rem, 22vw, 9.5rem)",
+            color: "var(--color-wine)",
+          }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
         >
           Litzy
         </motion.h1>
+
+        {/* Ornamental divider */}
+        <motion.div
+          className="flex items-center gap-4 mt-1 mb-3"
+          initial={{ opacity: 0, scaleX: 0 }}
+          animate={{ opacity: 1, scaleX: 1 }}
+          transition={{ delay: 0.85, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span
+            className="block h-px w-14"
+            style={{ backgroundColor: "var(--color-terracotta)", opacity: 0.55 }}
+          />
+          <span style={{ color: "var(--color-terracotta)", fontSize: "0.85rem" }}>
+            ✦
+          </span>
+          <span
+            className="block h-px w-14"
+            style={{ backgroundColor: "var(--color-terracotta)", opacity: 0.55 }}
+          />
+        </motion.div>
+
+        {/* Subtitle */}
         <motion.p
-          className="mt-4 text-2xl md:text-3xl font-semibold text-rose-400"
+          className="text-xl md:text-2xl tracking-widest uppercase"
+          style={{
+            color: "var(--color-terracotta)",
+            fontStyle: "italic",
+            letterSpacing: "0.16em",
+            fontSize: "clamp(0.85rem, 2.5vw, 1.2rem)",
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          transition={{ delay: 1.0, duration: 0.8 }}
         >
-          ¡Feliz Cumpleaños! 🎂
+          Feliz Cumpleaños
         </motion.p>
+
+        {/* Animated phrase */}
         <motion.p
-          className="mt-5 text-base md:text-lg text-rose-700/80 font-medium tracking-wide px-2"
+          className="mt-5 text-base md:text-lg leading-relaxed px-2"
+          style={{ color: "var(--color-muted)", fontStyle: "italic" }}
           initial="hidden"
           animate="visible"
           variants={{
             hidden: {},
             visible: {
-              transition: { staggerChildren: 0.04, delayChildren: 1.6 },
+              transition: { staggerChildren: 0.04, delayChildren: 1.8 },
             },
           }}
         >
@@ -160,58 +226,60 @@ export default function Hero() {
             <motion.span
               key={i}
               variants={{
-                hidden: { opacity: 0, y: 8 },
+                hidden: { opacity: 0, y: 6 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.25 }}
+              transition={{ duration: 0.2 }}
             >
               {char}
             </motion.span>
           ))}
         </motion.p>
+
+        {/* Gerberas */}
         <motion.div
           className="mt-6 flex items-center gap-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 3.2, duration: 0.4 }}
+          transition={{ delay: 3.4, duration: 0.4 }}
         >
-          <Gerbera color="#f43f5e" innerColor="#fb7185" size={70} delay={3.3} />
-          <Gerbera color="#fb923c" innerColor="#fbbf24" size={90} delay={3.5} />
-          <Gerbera color="#e11d48" innerColor="#f43f5e" size={70} delay={3.7} />
+          <Gerbera color="#7b1d3d" innerColor="#c44863" size={68} delay={3.5} />
+          <Gerbera color="#c44863" innerColor="#c99a2e" size={88} delay={3.7} />
+          <Gerbera color="#7b1d3d" innerColor="#c44863" size={68} delay={3.9} />
         </motion.div>
+
+        {/* CTA button — editorial outlined style */}
         <motion.div
           className="mt-14"
-          initial={{ opacity: 0, y: 30, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             delay: 5.5,
             duration: 0.8,
-            type: "spring",
-            stiffness: 100,
+            ease: [0.16, 1, 0.3, 1],
           }}
         >
           <Link href="/historia">
             <motion.div
-              className="relative flex items-center justify-center gap-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold px-10 sm:px-16 py-4 sm:py-5 rounded-full text-lg sm:text-xl shadow-[0_8px_30px_rgba(244,63,94,0.45)] cursor-pointer overflow-hidden w-full sm:w-auto sm:min-w-[260px]"
+              className="relative flex items-center justify-center gap-3 px-12 sm:px-16 py-4 cursor-pointer w-full sm:w-auto sm:min-w-[280px] overflow-hidden"
+              style={{
+                border: "1.5px solid var(--color-wine)",
+                color: "var(--color-wine)",
+                fontSize: "0.8rem",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+              }}
               whileHover={{
-                scale: 1.06,
-                boxShadow: "0 12px 40px rgba(244,63,94,0.55)",
+                backgroundColor: "oklch(32% 0.115 10)",
+                color: "oklch(97.2% 0.013 78)",
               }}
               whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.25 }}
             >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-                animate={{ x: ["-100%", "200%"] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 2.5,
-                  delay: 6,
-                  ease: "easeInOut",
-                  repeatDelay: 2,
-                }}
-              />
-              <span className="text-2xl">🎁</span>
-              <span className="tracking-wide text-lg">Último detalle</span>
+              <span className="text-lg">🎁</span>
+              <span style={{ fontFamily: "'EB Garamond', Georgia, serif" }}>
+                Un último detalle
+              </span>
             </motion.div>
           </Link>
         </motion.div>

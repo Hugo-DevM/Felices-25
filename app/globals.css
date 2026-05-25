@@ -1,23 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:ital,opsz,wght@0,8..144,400;0,8..144,500;0,8..144,600;1,8..144,400;1,8..144,500&display=swap');
 @import "tailwindcss";
 
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --color-cream:      oklch(97.2% 0.013 78);
+  --color-wine:       oklch(32%   0.115 10);
+  --color-rose:       oklch(58%   0.20  15);
+  --color-terracotta: oklch(64%   0.17  36);
+  --color-gold:       oklch(76%   0.12  82);
+  --color-blush:      oklch(91%   0.055 18);
+  --color-muted:      oklch(52%   0.07  14);
+  --color-border:     oklch(87%   0.045 18);
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #fff0f6;
+  font-family: 'EB Garamond', Georgia, serif;
+  background-color: var(--color-cream);
+  color: var(--color-wine);
   overflow-x: hidden;
-  color: #3d1a2e;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-optical-sizing: auto;
+}
+
+/* Warm grain overlay for depth and texture */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.038;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+  font-optical-sizing: auto;
 }
 
 .font-cursive {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Pinyon Script', cursive;
 }

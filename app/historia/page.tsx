@@ -1173,31 +1173,36 @@ const TRIBUTE_LINES = [
     text: "Que bonito fue...",
     delay: 0.5,
     size: "text-2xl md:text-3xl",
-    color: "text-rose-400",
+    color: "",
+    style: { color: "var(--color-muted)" },
   },
   {
     text: "cada momento contigo.",
     delay: 1.5,
     size: "text-2xl md:text-3xl",
-    color: "text-rose-400",
+    color: "",
+    style: { color: "var(--color-muted)" },
   },
   {
     text: "Feliz Cumpleaños",
     delay: 3,
     size: "text-5xl md:text-6xl font-cursive",
-    color: "text-rose-500",
+    color: "",
+    style: { color: "var(--color-terracotta)" },
   },
   {
     text: "Litzy",
     delay: 4,
     size: "text-6xl md:text-7xl font-cursive",
-    color: "text-fuchsia-400",
+    color: "",
+    style: { color: "var(--color-wine)" },
   },
   {
     text: "Que este día sea tan especial como tú. 🌸",
     delay: 5.5,
     size: "text-base md:text-lg",
-    color: "text-rose-500/80",
+    color: "",
+    style: { color: "var(--color-muted)", fontStyle: "italic" as const },
   },
 ];
 
@@ -1219,7 +1224,13 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-100 via-rose-50 to-fuchsia-100" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 140% 90% at 50% 45%, oklch(97.2% 0.013 78) 0%, oklch(91% 0.055 18) 100%)",
+        }}
+      />
 
       {FLOATING_ITEMS.map((f, i) => (
         <motion.div
@@ -1250,7 +1261,11 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
         {TRIBUTE_LINES.map((line, i) => (
           <motion.p
             key={i}
-            className={`${line.size} ${line.color} font-medium leading-snug drop-shadow`}
+            className={`${line.size} leading-snug drop-shadow`}
+            style={{
+              ...line.style,
+              fontStyle: line.style?.fontStyle ?? "italic",
+            }}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: line.delay, duration: 0.9, ease: "easeOut" }}
@@ -1267,7 +1282,11 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
         transition={{ duration: 12, times: [0, 0.75, 1], ease: "easeOut" }}
       >
         <motion.p
-          className="font-cursive text-7xl sm:text-8xl md:text-9xl text-rose-500 drop-shadow-lg tracking-widest text-center px-4"
+          className="font-cursive drop-shadow-lg text-center px-4"
+          style={{
+            fontSize: "clamp(5rem, 22vw, 9rem)",
+            color: "var(--color-wine)",
+          }}
           initial={{ scale: 0.8 }}
           animate={{ scale: [0.8, 0.8, 1] }}
           transition={{ duration: 12, times: [0, 0.75, 1], ease: "easeOut" }}
@@ -1284,7 +1303,8 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
       >
         <Link
           href="/"
-          className="text-rose-400 hover:text-rose-600 underline text-sm"
+          className="text-sm underline"
+          style={{ fontStyle: "italic" }}
         >
           ← Volver al inicio
         </Link>
@@ -1328,7 +1348,12 @@ export default function HistoriaPage() {
       {current >= 0 && current < SCENES.length && (
         <Link
           href="/"
-          className={`absolute top-4 left-4 text-sm px-3 py-1 rounded-full backdrop-blur-sm transition-colors ${isDark ? "text-white/60 hover:text-white bg-white/10" : "text-rose-400 hover:text-rose-600 bg-rose-100/60"}`}
+          className="absolute top-4 left-4 text-sm px-3 py-1 backdrop-blur-sm transition-colors"
+          style={{
+            color: isDark ? "oklch(97% 0.012 75 / 0.6)" : "var(--color-muted)",
+            letterSpacing: "0.06em",
+            borderRadius: "2px",
+          }}
         >
           ← Volver
         </Link>
@@ -1341,40 +1366,83 @@ export default function HistoriaPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="font-cursive text-6xl text-rose-500 drop-shadow">
+          <p
+            className="font-cursive"
+            style={{
+              fontSize: "clamp(2.8rem, 9vw, 4.2rem)",
+              color: "var(--color-wine)",
+              lineHeight: 1.15,
+              maxWidth: "16ch",
+            }}
+          >
             La historia que no me canso de contar
           </p>
-          <p className="text-rose-400 text-lg max-w-xs leading-relaxed">
-            Una historia contada con monitos y mucho cariño 💕
-          </p>
-          <motion.button
-            onClick={start}
-            className="relative flex items-center justify-center gap-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold px-10 sm:px-16 py-4 sm:py-5 rounded-full text-lg sm:text-xl shadow-[0_8px_30px_rgba(244,63,94,0.45)] cursor-pointer overflow-hidden w-full sm:w-auto sm:min-w-[260px]"
-            whileHover={{
-              scale: 1.06,
-              boxShadow: "0 12px 40px rgba(244,63,94,0.55)",
-            }}
-            whileTap={{ scale: 0.97 }}
-          >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-              animate={{ x: ["-100%", "200%"] }}
-              transition={{
-                repeat: Infinity,
-                duration: 2.5,
-                ease: "easeInOut",
-                repeatDelay: 2,
+
+          {/* Ornament */}
+          <div className="flex items-center gap-4">
+            <span
+              className="block h-px w-12"
+              style={{
+                backgroundColor: "var(--color-terracotta)",
+                opacity: 0.5,
               }}
             />
-            <span className="text-2xl">▶</span>
-            <span className="tracking-wide text-lg">Comenzar</span>
+            <span
+              style={{ color: "var(--color-terracotta)", fontSize: "0.8rem" }}
+            >
+              ✦
+            </span>
+            <span
+              className="block h-px w-12"
+              style={{
+                backgroundColor: "var(--color-terracotta)",
+                opacity: 0.5,
+              }}
+            />
+          </div>
+
+          <p
+            className="max-w-xs leading-relaxed"
+            style={{
+              color: "var(--color-muted)",
+              fontStyle: "italic",
+              fontSize: "1.05rem",
+            }}
+          >
+            Una historia contada con monitos y mucho cariño 💕
+          </p>
+
+          <motion.button
+            onClick={start}
+            className="flex items-center justify-center gap-3 px-12 sm:px-16 py-4 cursor-pointer w-full sm:w-auto sm:min-w-[260px]"
+            style={{
+              border: "1.5px solid var(--color-wine)",
+              color: "var(--color-wine)",
+              fontSize: "0.8rem",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+            }}
+            whileHover={{
+              backgroundColor: "oklch(32% 0.115 10)",
+              color: "oklch(97.2% 0.013 78)",
+            }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.22 }}
+          >
+            <span className="text-base">▶</span>
+            <span>Comenzar</span>
           </motion.button>
-          <p className="text-rose-300 text-sm">
+
+          <p
+            className="text-sm"
+            style={{ color: "var(--color-muted)", fontStyle: "italic" }}
+          >
             🎵 Activa el sonido para la experiencia completa
           </p>
           <Link
             href="/"
-            className="text-rose-300 text-sm hover:text-rose-400 underline mt-2"
+            className="text-sm underline mt-1"
+            style={{ color: "var(--color-muted)" }}
           >
             ← Volver al inicio
           </Link>
@@ -1392,13 +1460,27 @@ export default function HistoriaPage() {
             transition={{ duration: 0.7 }}
           >
             <div
-              className={`w-full rounded-3xl overflow-hidden shadow-2xl border-2 ${isDark ? "border-white/10" : "border-rose-100"}`}
+              className={`w-full overflow-hidden ${isDark ? "border border-white/10" : "border border-[var(--color-border)]"}`}
+              style={{
+                borderRadius: "1rem",
+                boxShadow: isDark
+                  ? "0 8px 48px oklch(0% 0 0 / 0.45)"
+                  : "0 6px 40px oklch(32% 0.115 10 / 0.10)",
+              }}
             >
               <scene.Component />
             </div>
 
             <motion.p
-              className={`text-center text-base md:text-lg font-medium px-2 leading-relaxed max-w-sm ${isDark ? "text-white/90" : "text-rose-900"}`}
+              className="text-center px-2 max-w-sm"
+              style={{
+                fontStyle: "italic",
+                fontSize: "clamp(1rem, 2.5vw, 1.15rem)",
+                lineHeight: 1.7,
+                color: isDark
+                  ? "oklch(97% 0.012 75 / 0.92)"
+                  : "var(--color-wine)",
+              }}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
@@ -1410,7 +1492,19 @@ export default function HistoriaPage() {
               {SCENES.map((_, i) => (
                 <div
                   key={i}
-                  className={`rounded-full transition-all duration-400 ${i === current ? "w-6 h-2.5 bg-rose-500" : i < current ? "w-2.5 h-2.5 bg-rose-300" : "w-2.5 h-2.5 bg-rose-200"}`}
+                  className="transition-all duration-500"
+                  style={{
+                    height: "2px",
+                    width: i === current ? "2rem" : "0.6rem",
+                    borderRadius: "2px",
+                    backgroundColor:
+                      i === current
+                        ? "var(--color-wine)"
+                        : i < current
+                          ? "var(--color-terracotta)"
+                          : "var(--color-border)",
+                    opacity: i > current ? 0.6 : 1,
+                  }}
                 />
               ))}
             </div>
