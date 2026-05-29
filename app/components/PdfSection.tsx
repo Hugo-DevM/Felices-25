@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+const PDF_URL = "/Perdon by Hugo Montaño.pdf";
+
 export default function PdfSection() {
   return (
     <motion.section
@@ -32,19 +34,47 @@ export default function PdfSection() {
         by Hugo Montaño
       </p>
 
+      {/* Desktop: iframe viewer */}
       <div
-        className="w-full rounded-xl overflow-hidden shadow-lg"
-        style={{
-          maxWidth: "720px",
-          border: "1px solid var(--color-border)",
-        }}
+        className="hidden md:block w-full rounded-xl overflow-hidden shadow-lg"
+        style={{ maxWidth: "720px", border: "1px solid var(--color-border)" }}
       >
         <iframe
-          src="/Perdon by Hugo Montaño.pdf"
+          src={PDF_URL}
           className="w-full"
           style={{ height: "80vh", minHeight: "480px" }}
           title="Perdón by Hugo Montaño"
         />
+      </div>
+
+      {/* Mobile: open button */}
+      <div className="md:hidden flex flex-col items-center gap-4 w-full" style={{ maxWidth: "320px" }}>
+        <p
+          className="text-sm text-center"
+          style={{ color: "var(--color-muted)", fontStyle: "italic" }}
+        >
+          Toca el botón para leer el documento
+        </p>
+        <motion.a
+          href={PDF_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full flex items-center justify-center gap-3 py-4 rounded-xl"
+          style={{
+            border: "1.5px solid var(--color-wine)",
+            color: "var(--color-wine)",
+            fontSize: "0.85rem",
+            letterSpacing: "0.14em",
+            textTransform: "uppercase",
+            textDecoration: "none",
+          }}
+          whileTap={{ scale: 0.97 }}
+          whileHover={{ backgroundColor: "oklch(32% 0.115 10)", color: "oklch(97.2% 0.013 78)" }}
+          transition={{ duration: 0.2 }}
+        >
+          <span>📄</span>
+          <span>Abrir Perdón</span>
+        </motion.a>
       </div>
     </motion.section>
   );
