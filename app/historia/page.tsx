@@ -1284,23 +1284,30 @@ function Tribute({ onConfetti }: { onConfetti: () => void }) {
         <motion.p
           className="font-cursive drop-shadow-lg text-center px-4"
           style={{
-            fontSize: "clamp(5rem, 22vw, 9rem)",
+            fontSize: "clamp(1.2rem, 4vw, 2rem)",
             color: "var(--color-wine)",
           }}
           initial={{ scale: 0.8 }}
           animate={{ scale: [0.8, 0.8, 1] }}
           transition={{ duration: 12, times: [0, 0.75, 1], ease: "easeOut" }}
         >
-          Adiós.
+          &ldquo;El peor error del ser humano es intentar sacar de la cabeza lo
+          que no sale del corazón&rdquo;
         </motion.p>
       </motion.div>
 
       <motion.div
-        className="absolute bottom-8 left-0 right-0 flex justify-center"
+        className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 13, duration: 1 }}
       >
+        <p
+          className="text-xs"
+          style={{ color: "var(--color-muted)", fontStyle: "italic" }}
+        >
+          Y que trabajen los jodidos ;)
+        </p>
         <Link
           href="/"
           className="text-sm underline"

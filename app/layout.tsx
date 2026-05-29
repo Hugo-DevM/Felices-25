@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Pinyon_Script, EB_Garamond } from "next/font/google";
+import { Playfair_Display, Lora } from "next/font/google";
 import "./globals.css";
 
-const pinyonScript = Pinyon_Script({
-  weight: "400",
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
   variable: "--font-script",
   display: "swap",
 });
 
-const ebGaramond = EB_Garamond({
+const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${pinyonScript.variable} ${ebGaramond.variable}`}>
+    <html lang="es" className={`${playfairDisplay.variable} ${lora.variable}`}>
       <body>{children}</body>
     </html>
   );
