@@ -48,7 +48,7 @@ export default function PdfSection() {
       </div>
 
       {/* Mobile: open button */}
-      <div className="md:hidden flex flex-col items-center gap-4 w-full" style={{ maxWidth: "320px" }}>
+      <div className="md:hidden flex flex-col items-center gap-4 w-full pb-8" style={{ maxWidth: "320px" }}>
         <p
           className="text-sm text-center"
           style={{ color: "var(--color-muted)", fontStyle: "italic" }}
@@ -79,3 +79,4 @@ export default function PdfSection() {
     </motion.section>
   );
 }
+
