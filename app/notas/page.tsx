@@ -213,7 +213,7 @@ export default function NotasPage() {
           }}
         >
           Cosas que siento pero que ya no puedo decir, una forma de desahogarme
-          con las cosas que se quedaron atoradas antes de salir.
+          con las cosas que se jamas podre decirte en persona.
         </p>
       </motion.div>
 
