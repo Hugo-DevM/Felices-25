@@ -24,6 +24,26 @@ const NOTAS: Nota[] = [
     },
     rotacion: -1.5,
   },
+  {
+    id: 2,
+    texto:
+      "Si hubiera sabido que aquel dia en la noche seria la ultima ves que te veria, me hubiera quedado mas tiempo de lo habitual.",
+    cancion: {
+      titulo: "Solare",
+      url: "https://open.spotify.com/track/6TaJZRQRgvjOtRb31BlPLd?si=83adf7c26106477f",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 3,
+    texto:
+      "Me gustaria creer que algun dia volveremos a estar juntos, algo que suena bastante absurdo porque yo mismo se que no va a pasar.",
+    cancion: {
+      titulo: "Arcoloria",
+      url: "https://open.spotify.com/track/0Z3l6V9yEstXhGrMcUxYlJ?si=441b4ddd663a4998",
+    },
+    rotacion: -1.5,
+  },
 ];
 
 function SpotifyButton({ song }: { song: Nota["cancion"] }) {
@@ -192,7 +212,8 @@ export default function NotasPage() {
             fontSize: "1rem",
           }}
         >
-          Cosas que siento pero que ya no puedo decir.
+          Cosas que siento pero que ya no puedo decir, una forma de desahogarme
+          con las cosas que se quedaron atoradas antes de salir.
         </p>
       </motion.div>
 
