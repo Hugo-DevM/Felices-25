@@ -73,7 +73,13 @@ function PhotoRow({
 
 export default function Hero() {
   const [floaters, setFloaters] = useState<
-    { id: number; emoji: string; left: number; delay: number; duration: number }[]
+    {
+      id: number;
+      emoji: string;
+      left: number;
+      delay: number;
+      duration: number;
+    }[]
   >([]);
 
   useEffect(() => {
@@ -89,9 +95,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4"
-    >
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
       {/* Background */}
       <div
         className="absolute inset-0 -z-10"
@@ -134,31 +138,55 @@ export default function Hero() {
           style={{ left: photo.left, top: photo.top }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4 + i * 0.15, duration: 0.6, type: "spring", stiffness: 120 }}
+          transition={{
+            delay: 0.4 + i * 0.15,
+            duration: 0.6,
+            type: "spring",
+            stiffness: 120,
+          }}
         >
           <motion.div
             animate={{ y: [0, -8, 0] }}
-            transition={{ repeat: Infinity, duration: 3 + i * 0.4, ease: "easeInOut", delay: i * 0.3 }}
+            transition={{
+              repeat: Infinity,
+              duration: 3 + i * 0.4,
+              ease: "easeInOut",
+              delay: i * 0.3,
+            }}
             className="relative w-28 h-28 lg:w-36 lg:h-36 rounded-full overflow-hidden border-4 shadow-xl"
-            style={{ borderColor: "var(--color-cream)", boxShadow: "0 8px 32px oklch(32% 0.115 10 / 0.18)" }}
+            style={{
+              borderColor: "var(--color-cream)",
+              boxShadow: "0 8px 32px oklch(32% 0.115 10 / 0.18)",
+            }}
           >
-            <Image src={photo.src} alt={`Foto ${i + 1}`} fill className="object-cover" />
+            <Image
+              src={photo.src}
+              alt={`Foto ${i + 1}`}
+              fill
+              className="object-cover"
+            />
           </motion.div>
         </motion.div>
       ))}
 
       {/* ── Mobile: top 3 photos ── */}
       <div className="md:hidden relative z-10 w-full max-w-md pt-8">
-        <PhotoRow photos={HEART_PHOTOS.slice(0, 3)} startIndex={0} delayBase={0.1} />
+        <PhotoRow
+          photos={HEART_PHOTOS.slice(0, 3)}
+          startIndex={0}
+          delayBase={0.1}
+        />
       </div>
 
       {/* ── Center content — grows to fill space between photo rows ── */}
       <div className="flex flex-col items-center text-center relative z-10 w-full max-w-md py-4">
-
         {/* Name */}
         <motion.h1
           className="font-cursive leading-none"
-          style={{ fontSize: "clamp(5.2rem, 22vw, 9.5rem)", color: "var(--color-wine)" }}
+          style={{
+            fontSize: "clamp(5.2rem, 22vw, 9.5rem)",
+            color: "var(--color-wine)",
+          }}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
@@ -173,9 +201,25 @@ export default function Hero() {
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: 0.85, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="block h-px w-14" style={{ backgroundColor: "var(--color-terracotta)", opacity: 0.55 }} />
-          <span style={{ color: "var(--color-terracotta)", fontSize: "0.85rem" }}>✦</span>
-          <span className="block h-px w-14" style={{ backgroundColor: "var(--color-terracotta)", opacity: 0.55 }} />
+          <span
+            className="block h-px w-14"
+            style={{
+              backgroundColor: "var(--color-terracotta)",
+              opacity: 0.55,
+            }}
+          />
+          <span
+            style={{ color: "var(--color-terracotta)", fontSize: "0.85rem" }}
+          >
+            ✦
+          </span>
+          <span
+            className="block h-px w-14"
+            style={{
+              backgroundColor: "var(--color-terracotta)",
+              opacity: 0.55,
+            }}
+          />
         </motion.div>
 
         {/* Subtitle */}
@@ -202,13 +246,18 @@ export default function Hero() {
           animate="visible"
           variants={{
             hidden: {},
-            visible: { transition: { staggerChildren: 0.04, delayChildren: 1.8 } },
+            visible: {
+              transition: { staggerChildren: 0.04, delayChildren: 1.8 },
+            },
           }}
         >
           {PHRASE.split("").map((char, i) => (
             <motion.span
               key={i}
-              variants={{ hidden: { opacity: 0, y: 6 }, visible: { opacity: 1, y: 0 } }}
+              variants={{
+                hidden: { opacity: 0, y: 6 },
+                visible: { opacity: 1, y: 0 },
+              }}
               transition={{ duration: 0.2 }}
             >
               {char}
@@ -228,9 +277,8 @@ export default function Hero() {
           <Gerbera color="#7b1d3d" innerColor="#c44863" size={68} delay={3.9} />
         </motion.div>
 
-        {/* Button */}
         <motion.div
-          className="mt-8 w-full flex justify-center"
+          className="mt-8 w-full flex items-center justify-center gap-3"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 5.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -239,29 +287,56 @@ export default function Hero() {
             <motion.div
               className="flex items-center justify-center gap-3 py-4 cursor-pointer overflow-hidden"
               style={{
-                width: "min(280px, 90vw)",
+                width: "min(200px, 55vw)",
                 border: "1.5px solid var(--color-wine)",
                 color: "var(--color-wine)",
                 fontSize: "0.8rem",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
               }}
-              whileHover={{ backgroundColor: "oklch(32% 0.115 10)", color: "oklch(97.2% 0.013 78)" }}
+              whileHover={{
+                backgroundColor: "oklch(32% 0.115 10)",
+                color: "oklch(97.2% 0.013 78)",
+              }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.25 }}
             >
-              <span className="text-lg">🎁</span>
               <span>Un último detalle</span>
+            </motion.div>
+          </Link>
+
+          <Link href={"/notas"}>
+            <motion.div
+              className="flex items-center justify-center py-4 cursor-pointer overflow-hidden"
+              style={{
+                width: "min(110px, 30vw)",
+                border: "1.5px solid var(--color-muted)",
+                color: "var(--color-muted)",
+                fontSize: "0.75rem",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                opacity: 0.55,
+              }}
+              whileHover={{ opacity: 1 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.25 }}
+            >
+              <span>No abrir</span>
             </motion.div>
           </Link>
         </motion.div>
       </div>
 
-      {/* ── Mobile: bottom 3 photos ── */}
-      <div className="md:hidden relative z-10 w-full max-w-md" style={{ paddingBottom: "2rem", marginTop: "4rem" }}>
-        <PhotoRow photos={HEART_PHOTOS.slice(6, 9)} startIndex={6} delayBase={0.5} />
+      <div
+        className="md:hidden relative z-10 w-full max-w-md"
+        style={{ paddingBottom: "2rem", marginTop: "4rem" }}
+      >
+        <PhotoRow
+          photos={HEART_PHOTOS.slice(6, 9)}
+          startIndex={6}
+          delayBase={0.5}
+        />
       </div>
-
     </section>
   );
 }
