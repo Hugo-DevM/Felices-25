@@ -257,4 +257,83 @@ export const NOTAS: Nota[] = [
     },
     rotacion: -1.5,
   },
+  {
+    id: 26,
+    texto: "No olvides regresar, veras algo nuevo lo prometo.",
+    cancion: {
+      titulo: "Combustión",
+      url: "https://open.spotify.com/track/1zDuB9BuEt9Bm3J8OtKEvq?si=315ffed79e4545a7",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 27,
+    texto: "Quizas no fui perfecto, pero me esforce por hacerte feliz.",
+    cancion: {
+      titulo: "Te Quiero Tanto",
+      url: "https://open.spotify.com/track/6pfKQaiWcelILwxkf6adUz?si=1a8cfcf48e0c413c",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 28,
+    texto:
+      "Veintiocho notas y sigo encontrando cosas nuevas que decirte. Supongo que así de grande fue esto.",
+    cancion: {
+      titulo: "Hazta la Raíz",
+      url: "https://open.spotify.com/track/3lGMtkONrZdJ8kTCg6KIFf?si=1bb553e3744643cc",
+    },
+    rotacion: -1.5,
+  },
+
+  {
+    id: 29,
+    texto:
+      "Hoy soñé contigo. Al despertar no supe si sentirme bien o mal. Elegí sentirme agradecido de que al menos ahi seguimos juntos.",
+    cancion: {
+      titulo: "Amapolas",
+      url: "https://open.spotify.com/track/0z5yLgBmAtaylDYrgwzlpH?si=c422da70fad64222",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 30,
+    texto:
+      "Extraño hasta las cosas simples: un mensaje de buenos días, saber cómo te fue, esas pequeñeces que hacían grande el día.",
+    cancion: {
+      titulo: "Dueles",
+      url: "https://open.spotify.com/track/1iRvhKiXRElIH2Uf4gd95P?si=de5d7e8ab44d4e0f",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 31,
+    texto:
+      "Aveces quisiera que pasara el tiempo para volver a estar juntos, pero quizas falte demasiado para que eso suceda o jamas pasara.",
+    cancion: {
+      titulo: "Colapso",
+      url: "https://open.spotify.com/track/23oIli6ejy1DsFAaCKSZpB?si=0d557ca8a83a44de",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 32,
+    texto:
+      "Empiezo a notar que ya no escribo desde la desesperación, sino desde una tristeza más tranquila, más mía.",
+    cancion: {
+      titulo: "Ya No Te Hago Falta",
+      url: "https://open.spotify.com/track/6UaIXNg4TUkpI9QGQYlFYi?si=644eaeee591647f0",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 33,
+    texto:
+      "Parezco un loco obsesionado revisando tu instragram, si suben o bajas tus seguidos pero que voy a hacer con eso yo, si no puedo mandarte ni un hola.",
+    cancion: {
+      titulo: "Sueña Lindo Corazón",
+      url: "https://open.spotify.com/track/0uq0OrFNaOhCDOlySbYTUx?si=e561f37040ce452d",
+    },
+    rotacion: -1.5,
+  },
 ];
