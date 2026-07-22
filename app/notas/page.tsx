@@ -2,49 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-interface Nota {
-  id: number;
-  texto: string;
-  cancion: {
-    titulo: string;
-    url: string;
-  };
-  rotacion?: number;
-}
-
-const NOTAS: Nota[] = [
-  {
-    id: 1,
-    texto:
-      "Aun mi mente sigue esperando tu regreso aunque se que ya no va a pasar, no entiendo porque sigo esperando a que seas tu cuando yo jamas dejaria entrar a alguien que ya se fue.",
-    cancion: {
-      titulo: "Tristella",
-      url: "https://open.spotify.com/track/68jzcOer781H6plrKH2ERE?si=e218479237244da7",
-    },
-    rotacion: -1.5,
-  },
-  {
-    id: 2,
-    texto:
-      "Si hubiera sabido que aquel dia en la noche seria la ultima ves que te veria, me hubiera quedado mas tiempo de lo habitual.",
-    cancion: {
-      titulo: "Solare",
-      url: "https://open.spotify.com/track/6TaJZRQRgvjOtRb31BlPLd?si=83adf7c26106477f",
-    },
-    rotacion: -1.5,
-  },
-  {
-    id: 3,
-    texto:
-      "Me gustaria creer que algun dia volveremos a estar juntos, algo que suena bastante absurdo porque yo mismo se que no va a pasar.",
-    cancion: {
-      titulo: "Arcoloria",
-      url: "https://open.spotify.com/track/0Z3l6V9yEstXhGrMcUxYlJ?si=441b4ddd663a4998",
-    },
-    rotacion: -1.5,
-  },
-];
+import { type Nota, NOTAS } from "./notas";
 
 function SpotifyButton({ song }: { song: Nota["cancion"] }) {
   return (
