@@ -2,7 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { type Nota, NOTAS } from "./notas";
+
+type NoteStatus = { leida: boolean; cancionEscuchada: boolean };
+type StatusMap = Record<string, NoteStatus>;
 
 function SpotifyButton({ song }: { song: Nota["cancion"] }) {
   return (
@@ -60,7 +64,73 @@ function SpotifyButton({ song }: { song: Nota["cancion"] }) {
   );
 }
 
-function NotaCard({ nota, index }: { nota: Nota; index: number }) {
+function CheckButton({
+  active,
+  loading,
+  label,
+  activeLabel,
+  onClick,
+}: {
+  active: boolean;
+  loading: boolean;
+  label: string;
+  activeLabel: string;
+  onClick: () => void;
+}) {
+  return (
+    <motion.button
+      onClick={onClick}
+      disabled={loading}
+      whileHover={{ scale: loading ? 1 : 1.04 }}
+      whileTap={{ scale: loading ? 1 : 0.96 }}
+      transition={{ duration: 0.15 }}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+        padding: "5px 12px",
+        borderRadius: "500px",
+        border: active
+          ? "1.5px solid var(--color-terracotta)"
+          : "1.5px solid var(--color-border)",
+        background: active ? "oklch(64% 0.17 36 / 0.10)" : "transparent",
+        color: active ? "var(--color-terracotta)" : "var(--color-muted)",
+        fontSize: "0.75rem",
+        fontStyle: "normal",
+        cursor: loading ? "wait" : "pointer",
+        transition: "background 0.2s, border-color 0.2s, color 0.2s",
+        flexShrink: 0,
+      }}
+    >
+      <span style={{ fontSize: "0.9rem", lineHeight: 1 }}>
+        {active ? "✓" : "○"}
+      </span>
+      {active ? activeLabel : label}
+    </motion.button>
+  );
+}
+
+function NotaCard({
+  nota,
+  index,
+  status,
+  onToggle,
+}: {
+  nota: Nota;
+  index: number;
+  status: NoteStatus;
+  onToggle: (field: "leida" | "cancionEscuchada", value: boolean) => void;
+}) {
+  const [loadingField, setLoadingField] = useState<"leida" | "cancionEscuchada" | null>(null);
+
+  async function handleToggle(field: "leida" | "cancionEscuchada") {
+    setLoadingField(field);
+    await onToggle(field, !status[field]);
+    setLoadingField(null);
+  }
+
+  const fullyRead = status.leida && status.cancionEscuchada;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30, rotate: nota.rotacion ?? 0 }}
@@ -74,18 +144,68 @@ function NotaCard({ nota, index }: { nota: Nota; index: number }) {
       className="relative w-full"
       style={{
         padding: "3.5rem 2rem 2rem",
-        background: "oklch(98.5% 0.018 78)",
-        border: "1px solid var(--color-border)",
+        background: fullyRead
+          ? "oklch(97% 0.025 36)"
+          : "oklch(98.5% 0.018 78)",
+        border: fullyRead
+          ? "1px solid oklch(64% 0.17 36 / 0.35)"
+          : "1px solid var(--color-border)",
         boxShadow:
           "0 4px 24px oklch(32% 0.115 10 / 0.09), 0 1px 3px oklch(32% 0.115 10 / 0.06)",
         transformOrigin: "center",
+        transition: "background 0.4s, border-color 0.4s",
       }}
     >
+      {/* Pin */}
       <div
         className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full"
-        style={{ backgroundColor: "var(--color-terracotta)", opacity: 0.7 }}
+        style={{
+          backgroundColor: fullyRead
+            ? "var(--color-terracotta)"
+            : "var(--color-terracotta)",
+          opacity: fullyRead ? 1 : 0.7,
+        }}
       />
 
+      {/* Día badge */}
+      <div
+        className="absolute top-4 left-4"
+        style={{
+          fontSize: "0.7rem",
+          letterSpacing: "0.06em",
+          color: "var(--color-terracotta)",
+          opacity: 0.85,
+          fontStyle: "normal",
+          fontWeight: 600,
+          textTransform: "uppercase",
+        }}
+      >
+        Día {nota.id} sin ti
+      </div>
+
+      {/* Fully read badge */}
+      {fullyRead && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="absolute top-4 right-4"
+          style={{
+            fontSize: "0.65rem",
+            letterSpacing: "0.05em",
+            color: "var(--color-terracotta)",
+            fontStyle: "normal",
+            fontWeight: 700,
+            textTransform: "uppercase",
+            display: "flex",
+            alignItems: "center",
+            gap: "3px",
+          }}
+        >
+          ✓ Completa
+        </motion.div>
+      )}
+
+      {/* Texto */}
       <p
         className="relative text-base leading-relaxed mb-8"
         style={{ color: "var(--color-wine)", fontStyle: "italic" }}
@@ -93,20 +213,94 @@ function NotaCard({ nota, index }: { nota: Nota; index: number }) {
         {nota.texto}
       </p>
 
+      {/* Bottom section */}
       <div
-        className="flex justify-center"
         style={{
           borderTop: "1px solid var(--color-border)",
           paddingTop: "1.25rem",
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.85rem",
         }}
       >
-        <SpotifyButton song={nota.cancion} />
+        <div className="flex justify-center">
+          <SpotifyButton song={nota.cancion} />
+        </div>
+
+        {/* Toggle buttons */}
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <CheckButton
+            active={status.leida}
+            loading={loadingField === "leida"}
+            label="Ya la leí"
+            activeLabel="Ya la leí"
+            onClick={() => handleToggle("leida")}
+          />
+          <CheckButton
+            active={status.cancionEscuchada}
+            loading={loadingField === "cancionEscuchada"}
+            label="Ya escuché la canción"
+            activeLabel="Ya escuché la canción"
+            onClick={() => handleToggle("cancionEscuchada")}
+          />
+        </div>
       </div>
     </motion.div>
   );
 }
 
+const DEFAULT_STATUS: NoteStatus = { leida: false, cancionEscuchada: false };
+
 export default function NotasPage() {
+  const [statusMap, setStatusMap] = useState<StatusMap>({});
+  const [loadingStatus, setLoadingStatus] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/notes")
+      .then((r) => r.json())
+      .then((data) => {
+        if (!data.error) setStatusMap(data);
+      })
+      .finally(() => setLoadingStatus(false));
+  }, []);
+
+  async function handleToggle(
+    notaId: number,
+    field: "leida" | "cancionEscuchada",
+    value: boolean
+  ) {
+    const id = String(notaId);
+    // Optimistic update
+    setStatusMap((prev) => ({
+      ...prev,
+      [id]: { ...(prev[id] ?? DEFAULT_STATUS), [field]: value },
+    }));
+
+    const res = await fetch("/api/notes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, field, value }),
+    });
+
+    if (!res.ok) {
+      // Revert on error
+      setStatusMap((prev) => ({
+        ...prev,
+        [id]: { ...(prev[id] ?? DEFAULT_STATUS), [field]: !value },
+      }));
+    }
+  }
+
+  const totalLeidas = NOTAS.filter((n) => statusMap[n.id]?.leida).length;
+  const totalCanciones = NOTAS.filter((n) => statusMap[n.id]?.cancionEscuchada).length;
+
   return (
     <div
       className="min-h-screen flex flex-col items-center px-4 pb-20"
@@ -131,7 +325,7 @@ export default function NotasPage() {
       </motion.div>
 
       <motion.div
-        className="flex flex-col items-center text-center mt-10 mb-32 gap-3"
+        className="flex flex-col items-center text-center mt-10 mb-12 gap-3"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
@@ -173,11 +367,47 @@ export default function NotasPage() {
           Cosas que siento pero que ya no puedo decir, una forma de desahogarme
           con las cosas que se jamas podre decirte en persona.
         </p>
+
+        {/* Progress counters */}
+        {!loadingStatus && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            style={{
+              display: "flex",
+              gap: "1.5rem",
+              marginTop: "0.5rem",
+              fontSize: "0.8rem",
+              color: "var(--color-muted)",
+              fontStyle: "normal",
+            }}
+          >
+            <span>
+              <span style={{ color: "var(--color-terracotta)", fontWeight: 600 }}>
+                {totalLeidas}
+              </span>
+              /{NOTAS.length} leídas
+            </span>
+            <span>
+              <span style={{ color: "var(--color-terracotta)", fontWeight: 600 }}>
+                {totalCanciones}
+              </span>
+              /{NOTAS.length} canciones escuchadas
+            </span>
+          </motion.div>
+        )}
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl items-start mb-20">
         {NOTAS.map((nota, i) => (
-          <NotaCard key={nota.id} nota={nota} index={i} />
+          <NotaCard
+            key={nota.id}
+            nota={nota}
+            index={i}
+            status={statusMap[nota.id] ?? DEFAULT_STATUS}
+            onToggle={(field, value) => handleToggle(nota.id, field, value)}
+          />
         ))}
       </div>
     </div>
