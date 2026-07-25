@@ -10,7 +10,7 @@ export interface Nota {
 
 export const NOTAS: Nota[] = [
   {
-    id: 1,
+    id: 4,
     texto:
       "Aun mi mente sigue esperando tu regreso aunque se que ya no va a pasar, no entiendo porque sigo esperando a que seas tu cuando yo jamas dejaria entrar a alguien que ya se fue.",
     cancion: {
@@ -40,7 +40,7 @@ export const NOTAS: Nota[] = [
     rotacion: -1.5,
   },
   {
-    id: 4,
+    id: 1,
     texto:
       "El primer dia de un adios definitivo realmente fue un mal sabor de boca y lo peor es que no me encontraba ni bien como para recibir eso.",
     cancion: {
@@ -296,10 +296,11 @@ export const NOTAS: Nota[] = [
     },
     rotacion: -1.5,
   },
+
   {
     id: 30,
     texto:
-      "Extraño hasta las cosas simples: un mensaje de buenos días, saber cómo te fue, esas pequeñeces que hacían grande el día.",
+      "Hoy pense mucho mas que otro dias, por todo lo que sucedio en vallarta, que sera de ti?.",
     cancion: {
       titulo: "Dueles",
       url: "https://open.spotify.com/track/1iRvhKiXRElIH2Uf4gd95P?si=de5d7e8ab44d4e0f",
@@ -333,6 +334,298 @@ export const NOTAS: Nota[] = [
     cancion: {
       titulo: "Sueña Lindo Corazón",
       url: "https://open.spotify.com/track/0uq0OrFNaOhCDOlySbYTUx?si=e561f37040ce452d",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 34,
+    texto:
+      "Enserio este es el final de todo? Asi de simple? Tan facil es dejar ir a una persona? Yo no se porque no puedo dejarlo ir esta vez.",
+    cancion: {
+      titulo: "Eclipsis",
+      url: "https://open.spotify.com/track/3K0OELvjok6ETSUOgf8meq?si=cfbd7d0c34e845c2",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 35,
+    texto:
+      "No lo voy a negar pero la mayoria de mis estados era para que los vieras tu.",
+    cancion: {
+      titulo: "Pa' Donde Se Fue",
+      url: "https://open.spotify.com/track/2TPZomzhdB7toV3cx0hj08?si=6d2e6ddf5a8b4702",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 36,
+    texto:
+      "Aun recuerdo tu sonrisa que tanto me gustaba, lo ironico es que yo siempre olvido todo, mi mente no retiene las cosas como para recordarlas.",
+    cancion: {
+      titulo: "Luma",
+      url: "https://open.spotify.com/track/6fUsEIAyQj6SGdzR3MPPja?si=ac63c39690e84b9c",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 37,
+    texto:
+      "No fui lo suficiente bueno? aveces me pregunto eso, no fui suficiente como para que te quedaras?",
+    cancion: {
+      titulo: "En El Próximo Big Bang",
+      url: "https://open.spotify.com/track/6XuvR6CAfIggnWzqtL0Vez?si=1c87ec7463a04e63",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 38,
+    texto:
+      "No lo a negar, creo que me equivoque en algunas cosas pero jamas fue mi intencion lastimarte.",
+    cancion: {
+      titulo: "Si Hay Algo",
+      url: "https://open.spotify.com/track/4RBCEwBRA0oHa49UwmhT98?si=4c9f545f95c042dd",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 39,
+    texto:
+      "Extraño hasta las cosas simples: un mensaje de buenos días, saber cómo te fue, esas pequeñeces que hacían grande el día.",
+    cancion: {
+      titulo: "Bonsai",
+      url: "https://open.spotify.com/track/072yPZOZLx9HmR3pdEhNwn?si=1e6d226652a64c59",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 40,
+    texto: `Estaras comiendo bien? O tu comida es la de siempre "Tostitos"`,
+    cancion: {
+      titulo: "Daño",
+      url: "https://open.spotify.com/track/1ruvZEJwcjUiuV1SxSaQb6?si=22c36204f37c46a1",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 41,
+    texto:
+      "La primera ves que salimos en el momento en que empezaste a hablar me enamore.",
+    cancion: {
+      titulo: "Arrancármelo",
+      url: "https://open.spotify.com/track/2GNjjWYymmIS8HEC4Xp2eu?si=417d9429e353451e",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 42,
+    texto:
+      "Hablando de la primera vez, solo fuimos a las nives por que tu querias porque no es que caiga muy bien los lacteos pero al final de eso importo.",
+    cancion: {
+      titulo: "Melón Vino",
+      url: "https://open.spotify.com/track/5uHAzGa4d9j35DEbhUwGhi?si=69456bcf702049c1",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 43,
+    texto:
+      "Me quede con ganas de ir a la playa contigo apesar de que no me gusta para nada ir",
+    cancion: {
+      titulo: "Morfeo",
+      url: "https://open.spotify.com/track/297Ev6aeDHc8dECDmK7SFH?si=d6651cb2f14c4532",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 44,
+    texto:
+      "Me hubiera gustado experimentar mas cosas contigo, creo que falto mucho por hacer.",
+    cancion: {
+      titulo: "Okupa",
+      url: "https://open.spotify.com/track/25NPeIjHjQGvyp4D52Tji2?si=117cc21930df4796",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 45,
+    texto:
+      "Aunque sigo escribiendo, me doy cuenta de que lo hago por amor y no por odio.",
+    cancion: {
+      titulo: "Y Lloro",
+      url: "https://open.spotify.com/track/6RcAHyC5sAUIbPTkhOQwd8?si=c0fc969c8a0f49b1",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 46,
+    texto: "Porque duele tanto? tan feliz era? :(",
+    cancion: {
+      titulo: "Las Noches",
+      url: "https://open.spotify.com/track/0uQhDYHyoZe5DpncrPolb6?si=d8d0ccbcadcf4313",
+    },
+    rotacion: -1.5,
+  },
+
+  {
+    id: 47,
+    texto:
+      "No lo voy a negar pero empiezo a conocer personas, pero no es lo mismo no me generan ese mismo impacto.",
+    cancion: {
+      titulo: "Piensalo",
+      url: "https://open.spotify.com/track/4ZOkfHC38nxSeSqzGE5HFr?si=630a4ca737244a49",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 48,
+    texto: "Tu vas a ser mi mujer",
+    cancion: {
+      titulo: "Tres Botellas",
+      url: "https://open.spotify.com/track/2CshODtf7iwe3pKlPmEWF5?si=e2797115e5d845fa",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 49,
+    texto: "Pinche gente malvibrosa la neta y envidiosa tambien.",
+    cancion: {
+      titulo: "Tu Sancho",
+      url: "https://open.spotify.com/track/6eLQXa6uk2EW8drsiKbABZ?si=d8cebf7a1e8a4e9b",
+    },
+    rotacion: -1.5,
+  },
+
+  {
+    id: 50,
+    texto:
+      "Ya estaba preparando como pedirte ser mi novia, queria hacer algo especial y tenia en mente un dia especial.",
+    cancion: {
+      titulo: "IMU",
+      url: "https://open.spotify.com/track/5RGqgYKLBrLMgE2zPI600I?si=d4df1a48a4864a69",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 51,
+    texto: "Soñe mucho a futuro contigo y aun lo sigo soñando.",
+    cancion: {
+      titulo: "Letal",
+      url: "https://open.spotify.com/track/0IMJsnmPXXgPyQDbhomx1B?si=37e5cc2ec8b94a70",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 52,
+    texto:
+      "Jamas habia contectado tan rapido con una persona como lo fue contigo.",
+    cancion: {
+      titulo: "Daño",
+      url: "https://open.spotify.com/track/136BeIIoBGrrU9fI1jbcDR?si=93bd0a9c53b24135",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 53,
+    texto:
+      "Queria pasar año nuevo contigo, queria tener terminar y empezar el año contigo.",
+    cancion: {
+      titulo: "Una Cerveza",
+      url: "https://open.spotify.com/track/0lbDzTINTToToBpkrnQT2t?si=3885ab79d8934b82",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 54,
+    texto:
+      "Por mi cabeza pasa tantas cosas, que aun no se como sigo de pie sin ti.",
+    cancion: {
+      titulo: "7 Días",
+      url: "https://open.spotify.com/track/6X3h549Z7LJk881NPI5kTa?si=e264ab3e742e40eb",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 55,
+    texto: "Pase por tu trabajo aprosito pero me dio miedo voltear",
+    cancion: {
+      titulo: "Lo Que Hay X Aquí",
+      url: "https://open.spotify.com/track/5IlLm20JXhKbMtsH20NblC?si=5bbe6ddac9bc4b2b",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 56,
+    texto:
+      "Tambien recuerdo tomar la foto de la nieva para que supieras que fui y asi fue",
+    cancion: {
+      titulo: "Vamos A Mirarnos",
+      url: "https://open.spotify.com/track/63Prex3xLlSgwHk3jN7Ezt?si=3823d3c21d01489a",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 57,
+    texto: "Aun sigo siendo incapz de ver un futuro sin ti.",
+    cancion: {
+      titulo: "Sin Mirar Las Señales",
+      url: "https://open.spotify.com/track/7fM24rKaYCTGf85Lj8U2pk?si=7089e982fda14e05",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 58,
+    texto: "Soñaras conmigo asi como lo hago contigo?",
+    cancion: {
+      titulo: "Como Dormiste?",
+      url: "https://open.spotify.com/track/3fjN3y5x4hN53rykAN2LHQ?si=87d22234c23f4e2f",
+    },
+    rotacion: -1.5,
+  },
+
+  {
+    id: 59,
+    texto: "Soñaras conmigo asi como lo hago contigo?",
+    cancion: {
+      titulo: "Como Dormiste?",
+      url: "https://open.spotify.com/track/3fjN3y5x4hN53rykAN2LHQ?si=87d22234c23f4e2f",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 60,
+    texto: "Aveces quiero llorar, aunque pase el tiempo, sigue doliendo",
+    cancion: {
+      titulo: "Mis Días A Tu Suerte",
+      url: "https://open.spotify.com/track/0XRJc66Gcvq8F98KE1TXD8?si=b6e93d5c4b194b2f",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 61,
+    texto:
+      "Era feliz comprandote cosas, invitarte algo para mi era mi mayor felicidad.",
+    cancion: {
+      titulo: "Miau",
+      url: "https://open.spotify.com/track/5osSgKDiyrzhLjsEABO6c9?si=8cdd2d24c1694823",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 62,
+    texto:
+      "Me quede con ganas de mi regalo de navidad, solo recordar que no lo tuve me hace llorar.",
+    cancion: {
+      titulo: "Gil",
+      url: "https://open.spotify.com/track/5jgmQkVypORb3enASCxjYs?si=24c2a50b7f4b4f34",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 63,
+    texto: "Podre ser feliz? Aferrarme me hara feliz? O solo me lastimo?.",
+    cancion: {
+      titulo: "Tuyo",
+      url: "https://open.spotify.com/track/4tQofG51E0juZBBVr6pral?si=87d261688e594fdd",
     },
     rotacion: -1.5,
   },
