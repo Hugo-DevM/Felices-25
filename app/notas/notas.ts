@@ -629,4 +629,247 @@ export const NOTAS: Nota[] = [
     },
     rotacion: -1.5,
   },
+  {
+    id: 64,
+    texto: "Comenze a salir solo y aunque se siente bien, no es lo mismo sin tu presencia.",
+    cancion: {
+      titulo: "Self Aware",
+      url: "https://open.spotify.com/track/4qW3BbQAwZsrnu8a3ZRdyT?si=e7599480454241c4",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 65,
+    texto: "Cada tanto regresan los flashback de nosotros juntos, extraño tanto lo que vivi contigo.",
+    cancion: {
+      titulo: "Turista",
+      url: "https://open.spotify.com/track/7tCuCjhxzjX2XCz4JiiAsp?si=3f6a74e22fba4b10",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 66,
+    texto: "Fui a la playa yo solo, quizas fui porque era que tenia planeado contigo y aunque detesto ir lo disfrute como si estuvieras conmigo.",
+    cancion: {
+      titulo: "DtMF",
+      url: "https://open.spotify.com/track/3sK8wGT43QFpWrvNQsrQya?si=b5b81ae19f584148",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 67,
+    texto: "Y fuiste tu mi baile inolvidable, aquello que no puedo olvidar y no olvidare aunque siga con mi vida.",
+    cancion: {
+      titulo: "Baile Inolvidable",
+      url: "https://open.spotify.com/track/2lTm559tuIvatlT1u0JYG2?si=941a2fb754514116",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 68,
+    texto: "Me preocupo por cosas tan tontas como si ya te gustara alguien mas o si ya eres feliz sin mi.",
+    cancion: {
+      titulo: "M.A.I",
+      url: "https://open.spotify.com/track/35ttE4t8lQZA2vuCYDg4G7?si=98fe246907ac4aa3",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 69,
+    texto: "Trato de ser feliz pero no se porque me cuesta tanto, me rió, me divierto y sonrio la mayor parte del tiempo pero porque me siento triste por las noches?.",
+    cancion: {
+      titulo: "Solifican12",
+      url: "https://open.spotify.com/track/4fDmgQfKMY7GcAwp2nNoQ0?si=5f8104a23aad4168",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 70,
+    texto: "Quizas ya no haya forma de regresar, quede como el malo ante todos tus conocimos y ante los mios, el precio a pagar por mis malas decisiones.",
+    cancion: {
+      titulo: "Una Bala",
+      url: "https://open.spotify.com/track/6Rz80wUWSUbGGVHvkH7NpU?si=ba7cf218d9ea4f78",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 71,
+    texto: "Que hubiese sido de nosotros? Tendriamos hijos? Seriamos Felices? Desperteria a tu lado el resto de mi vida?.",
+    cancion: {
+      titulo: "Olimpo",
+      url: "https://open.spotify.com/track/6tt6JnKerLnOL0oez9QPqS?si=42042327223f46d0",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 72,
+    texto: "Quisiera volver al pasado y comenzar desde ahi, pero se que no era el hombre que necesitabas.",
+    cancion: {
+      titulo: "Por Ti",
+      url: "https://open.spotify.com/track/3lnaMCNOqHZHzUYdHP6TxA?si=22874d753f8541e0",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 73,
+    texto: "Por que la vida es tan dificil? o solo me pasa a mi?.",
+    cancion: {
+      titulo: "Una Rosa",
+      url: "https://open.spotify.com/track/6ZMmC7Sevmomx2qX8uTJqz?si=0df2f919139d4898",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 74,
+    texto: "Lo unico que quiero es ser solo para ti y para nadie mas, si te tengo a ti lo tengo todo.",
+    cancion: {
+      titulo: "I Wanna Be Yours",
+      url: "https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n?si=5140d52da12540f8",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 75,
+    texto: "Muchas veces me pregunto, ¿Que me falto hacer?.",
+    cancion: {
+      titulo: "Tu Me Encantas",
+      url: "https://open.spotify.com/track/4otVIM59M0NRZybZAkHdf2?si=e3da88f6cb25490f",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 76,
+    texto: "Ya ha pasado bastante, te ira bien? como te va en la escuela? si voy cabe la posibilidad de verte?",
+    cancion: {
+      titulo: "¿Donde Estas?",
+      url: "https://open.spotify.com/track/27W00j4kgyRjF0Nygu6CmV?si=ebfeb869afd14a1a",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 77,
+    texto: "Porque seguir con mi vida se siente como traicionarte.",
+    cancion: {
+      titulo: "Olvidala",
+      url: "https://open.spotify.com/track/0nrQctfuJf5yEjPKHlMiBp?si=857659822c1b4993",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 78,
+    texto: "Creo que esto se vuelve mas DIFICIL porque no tengo amigos para preguntarles que hacer, solo me tengo a mi.",
+    cancion: {
+      titulo: "Disfruto: Challenge",
+      url: "https://open.spotify.com/track/445uGGM6s7NYzxF4VFqPnH?si=212b6af12ed24d01",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 79,
+    texto: "Aveces solo espero a que me llames para responder e ir por ti. Pero... ¿Pasara?.",
+    cancion: {
+      titulo: "Como Tú",
+      url: "https://open.spotify.com/track/0CvqywquA1KKut69KVSYF2?si=18023e5e1ed941d0",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 80,
+    texto: "Quizas no comence esto desde el primer dia, pero cada nota es un pensamiento de cada dia, porque aun no puedo olvidarte.",
+    cancion: {
+      titulo: "Solo Dime",
+      url: "https://open.spotify.com/track/3Hj8aLNeqHWs7q7obHKQdp?si=902d9d61f7234d30",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 81,
+    texto: "No creo que nuestra conexion haya sido una sola casualidad, creo yo que fue amor verdadero.",
+    cancion: {
+      titulo: "Una Cancion Bonita",
+      url: "https://open.spotify.com/track/3XzT5damOpGedvObdo1KGq?si=8a0b07792f5c4411",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 82,
+    texto: "Siempre senti miedo por perderte y final asi fue por culpa mia y de nadie mas.",
+    cancion: {
+      titulo: "Si Algun Dia Te Pierdo",
+      url: "https://open.spotify.com/track/56KDImTU8KoqsQIv5yKlgb?si=25c369f70dab43c5",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 83,
+    texto: "¿Podemos solo caminar tu y yo y volver a ser felices?.",
+    cancion: {
+      titulo: "Las Flores Que Eran Para Ti",
+      url: "https://open.spotify.com/track/21AsZjjxxcc0IAXjHw1v0V?si=b104dcc15da34ce8",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 84,
+    texto: "Ya se acercan los 3 meses, que rapido paso el tiempo. No te imaginas lo que daria por ti.",
+    cancion: {
+      titulo: "Tu Me Encantas",
+      url: "https://open.spotify.com/track/4QKgOso1KZ5dVb9SGVKyew?si=dfbba26e48e44bb5",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 85,
+    texto: "La vida era tan bonita, tu mi werita bronceada y yo el prieto jajaja.",
+    cancion: {
+      titulo: "Díme",
+      url: "https://open.spotify.com/track/40N1Ib95KgWnAcdVJsnUyE?si=3a5a3b66da644aff",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 86,
+    texto: "Solo me pregunto. ¿Que fue lo que te gusto de mi persona? Como para quererme como la primera vez que supiste de mi.",
+    cancion: {
+      titulo: "LQND",
+      url: "https://open.spotify.com/track/01cOYgZSgs9NH74cpIMjw4?si=e5b80832915844f2",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 87,
+    texto: "Avesces quisiera despedirme, pero no puedo dejar de escribir.",
+    cancion: {
+      titulo: "Vuela",
+      url: "https://open.spotify.com/track/2NqDHBotyUtyEtKuWDekC8?si=8c41dd2249274672",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 88,
+    texto: "Extraño esos besos, aunque solo fueron unos besos sencillos lo fueron todo para mi.",
+    cancion: {
+      titulo: "Do I Wanna Know?",
+      url: "https://open.spotify.com/track/5FVd6KXrgO9B3JPmC8OPst?si=a68fecc3a0014430",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 89,
+    texto: "Yo creo que no seremos felices separados, pero quizas me equivoco y solo soy yo el que no puede ser feliz sin ti y tu si.",
+    cancion: {
+      titulo: "Tu Boda",
+      url: "https://open.spotify.com/track/1cOboCuWYI2osTOfolMRS6?si=7cc17db330894530",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 90,
+    texto: "3 meses, parece que el tiempo pasa rapido pero creo que es todo lo contrario, se siente mas lento de lo normal.",
+    cancion: {
+      titulo: "Porque Te Vas",
+      url: "https://open.spotify.com/track/0lpxDRCONr2FJRqcM3Q74z?si=09c03fac1bf245a6",
+    },
+    rotacion: -1.5,
+  },
 ];
