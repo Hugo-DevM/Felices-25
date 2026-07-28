@@ -9,13 +9,14 @@ export interface Nota {
 }
 
 export const NOTAS: Nota[] = [
+  
   {
-    id: 4,
+    id: 1,
     texto:
-      "Aun mi mente sigue esperando tu regreso aunque se que ya no va a pasar, no entiendo porque sigo esperando a que seas tu cuando yo jamas dejaria entrar a alguien que ya se fue.",
+      "El primer dia de un adios definitivo realmente fue un mal sabor de boca y lo peor es que no me encontraba ni bien como para recibir eso.",
     cancion: {
-      titulo: "Tristella",
-      url: "https://open.spotify.com/track/68jzcOer781H6plrKH2ERE?si=e218479237244da7",
+      titulo: "Volver a vernos",
+      url: "https://open.spotify.com/track/2N4235nicbix0057NZ2sXs?si=d0c560940aec4763",
     },
     rotacion: -1.5,
   },
@@ -40,12 +41,12 @@ export const NOTAS: Nota[] = [
     rotacion: -1.5,
   },
   {
-    id: 1,
+    id: 4,
     texto:
-      "El primer dia de un adios definitivo realmente fue un mal sabor de boca y lo peor es que no me encontraba ni bien como para recibir eso.",
+      "Aun mi mente sigue esperando tu regreso aunque se que ya no va a pasar, no entiendo porque sigo esperando a que seas tu cuando yo jamas dejaria entrar a alguien que ya se fue.",
     cancion: {
-      titulo: "Volver a vernos",
-      url: "https://open.spotify.com/track/2N4235nicbix0057NZ2sXs?si=d0c560940aec4763",
+      titulo: "Tristella",
+      url: "https://open.spotify.com/track/68jzcOer781H6plrKH2ERE?si=e218479237244da7",
     },
     rotacion: -1.5,
   },
