@@ -585,10 +585,10 @@ export const NOTAS: Nota[] = [
 
   {
     id: 59,
-    texto: "Soñaras conmigo asi como lo hago contigo?",
+    texto: "Que paso con nuestro amor enterno.",
     cancion: {
-      titulo: "Como Dormiste?",
-      url: "https://open.spotify.com/track/3fjN3y5x4hN53rykAN2LHQ?si=87d22234c23f4e2f",
+      titulo: "Entre Nosotros",
+      url: "https://open.spotify.com/intl-es/track/5LazbgCsa2IskJbPMnI8Qd?si=5435653c4b3543f2",
     },
     rotacion: -1.5,
   },
@@ -873,4 +873,275 @@ export const NOTAS: Nota[] = [
     },
     rotacion: -1.5,
   },
+  {
+    id: 91,
+    texto: "Desde que te fuiste, no puedo dormir bien, no puedo hacer nada bien, no puedo pensar en nada bien.",
+    cancion: {
+      titulo: "Desde Que Te Fuiste",
+      url: "https://open.spotify.com/intl-es/track/1C3kTwvBsskFSdL95gXHej?si=1e50b73f38304572",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 92,
+    texto: "Ojala un dia mi nombre apareciera en tus pensamientos con la misma facilidad con la que aparecen los mios.",
+    cancion: {
+      titulo: "Bajo De La Piel",
+      url: "https://open.spotify.com/intl-es/track/3sc0Wv64rOuIRVkQO7rrer?si=a5e83418bd3f44bb",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 93,
+    texto: "Despues de pensarlo llegue a sentir que todo era culpa mia.",
+    cancion: {
+      titulo: "No Digas Nada",
+      url: "https://open.spotify.com/intl-es/track/4wtWL0UV8tCPv9VbUMLXYP?si=5d94d3c33527406d",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 94,
+    texto: "Solo imagina que esta vez el miedo que sientes, este completamente equivocado.",
+    cancion: {
+      titulo: "Me Tiene Mal",
+      url: "https://open.spotify.com/intl-es/track/1lI3pfm02Fw6zajcGyxJsg?si=1c6c2b4f984645ef",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 95,
+    texto: "Hay personas por las que siempre merece la pena volver y no eres cualquier persona como para dejarte ir.",
+    cancion: {
+      titulo: "Chica Paranormal",
+      url: "https://open.spotify.com/intl-es/track/3krzcyMKlRXjVkJFZqMN4t?si=9fd004c1491f4232",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 96,
+    texto: "Como me recordaras tu? Como algo pasajero? Como una casualidad? Como algo bonito? Como un recuerdo? Como algo que paso? Como algo que nunca sucedio?",
+    cancion: {
+      titulo: "A Mí",
+      url: "https://open.spotify.com/intl-es/track/7MmrcXVA7A5zZ2CbDuGHNa?si=6d72748a2f2b4cb9",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 97,
+    texto: "Cada dia olvido tu cara, tanto tiempo lejos hace divagar mi mente en los recuerdos que solo quedan.",
+    cancion: {
+      titulo: "Cicuta",
+      url: "https://open.spotify.com/intl-es/track/5ynCoWipwAVsS5ObUJSb8W?si=25323e78bc1f4965",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 98,
+    texto: "Muchos me dicen que debo superarlo y tambien quisiera poder hacerlo pero en el fondo mi corazon no quiere hacerlo, quiere creer que aun hay alguna esperanza.",
+    cancion: {
+      titulo: "Flechazo En El Centro",
+      url: "https://open.spotify.com/intl-es/track/4jn3R3KF5hx2fCiXlj89yE?si=957a8c7d939746c0",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 99,
+    texto: "Aunque cada dia lo asimilo mas, recordar duele porque siento que perdi una parte de mi.",
+    cancion: {
+      titulo: "La Vida Sin Ti",
+      url: "https://open.spotify.com/intl-es/track/1O1VvCshhDw3XIOOcfLziL?si=96d1da5aa2374615",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 100,
+    texto: "Siento que no puedo conocer a alguien mas, porque siento que te traiciono. Puedo ser feliz sin ti?",
+    cancion: {
+      titulo: "Dime Cuantas Veces",
+      url: "https://open.spotify.com/intl-es/track/4t8YQE2FIpTIq9SxeuOuuP?si=516d82a961834b57",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 101,
+    texto: "Es triste volver al inicio de todo, sin ser nada y sin saber de nosotros.",
+    cancion: {
+      titulo: "Vámonos A Marte",
+      url: "https://open.spotify.com/intl-es/track/1qBdJHxR2qY0dFad0ZI8sj?si=b40245b905154668",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 102,
+    texto: "Me pregunto si tu crees que podemos ser amigos? o porque se te hace tan facil mandarme un mensaje para no responder? Yo no vine a tu vida para ser tu amigo vine para ser algo mas.",
+    cancion: {
+      titulo: "MOJABI GHOST",
+      url: "https://open.spotify.com/intl-es/track/46YjJXVXWHlQ21odKktg5e?si=a6ec6c19cee244e7",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 103,
+    texto: "Cuando te amo, no te puedo amar mas de lo que te amo, y cuando te odio, no te puedo odiar mas de lo que te odio.",
+    cancion: {
+      titulo: "Nena Maldicion",
+      url: "https://open.spotify.com/intl-es/track/77dMSg2VHi2wwXjXNrmcrZ?si=50a05f3fe37e4c9e",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 104,
+    texto: "Porque te quiero y me siento culpable por quererte, por quererte y no poder tenerte, por quererte y no poder estar contigo.",
+    cancion: {
+      titulo: "Volando",
+      url: "https://open.spotify.com/intl-es/track/0G2zPzWqVjR68iNPmx2TBe?si=318a4aa1160d4e87",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 105,
+    texto: "Puedo parecer algo cobarde por escribir todo esto y no poder mandarte un mensaje de lo mucho que me haces falta.",
+    cancion: {
+      titulo: "Vuelve",
+      url: "https://open.spotify.com/intl-es/track/30zRVzH3FUvbtqYwLvd5fc?si=df8809bdce894c1a",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 106,
+    texto: "Porque no podemos volver a intentarlo sin miedo a nada?.",
+    cancion: {
+      titulo: "Un Desperdicio",
+      url: "https://open.spotify.com/intl-es/track/75qepWUT3FEyPyXQMMMVZm?si=7e6c2a6ea95d420a",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 107,
+    texto: "Eh olvidado tu voz, no tengo nada para recordarla.",
+    cancion: {
+      titulo: "El Bolero",
+      url: "https://open.spotify.com/intl-es/track/7FwSZyO5ynlN0OJGVOjE6k?si=ca06b7f20b1e410c",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 108,
+    texto: "Quiero volver contigo, no porque espero ver a tu ser de antes si no porque espero ver al ser de ahora, porque estoy seguro que me enamoraria de ti una vez mas.",
+    cancion: {
+      titulo: "Tiroteo",
+      url: "https://open.spotify.com/intl-es/track/05HpBFLrHBjWpgV0DSPUAv?si=e942a8d1e827467c",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 109,
+    texto: "Sobre pienso siempre demasiado las cosas, quizas por ello no puedo dejar ir cualquier cosa como si nada. Me amas?",
+    cancion: {
+      titulo: "Mejor No Nos Vemos",
+      url: "https://open.spotify.com/intl-es/track/6NT4RZ6CF6qFJqslGdqaRM?si=1e68baecf3cb4c42",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 110,
+    texto: "Fui el hombre mas feliz, tenia a la mujer mas bonita e inteligente.",
+    cancion: {
+      titulo: "Un Coco",
+      url: "https://open.spotify.com/intl-es/track/6VrQTLzzuyGIYjUDe4kAZk?si=00385e92a2144a30",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 111,
+    texto: "Eh querido dejar de escribir, pero esto me ayuda a sobre llevarlo, porque facil no es.",
+    cancion: {
+      titulo: "Solo Pienso En Ti",
+      url: "https://open.spotify.com/intl-es/track/3H9GDhVVTlmFQSmpt51qiP?si=630578f88974471c",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 112,
+    texto: "Queria que me presentaras como tu novio y que tu abuelito me sacara la espada para espantarme....",
+    cancion: {
+      titulo: "Corazón Puro",
+      url: "https://open.spotify.com/intl-es/track/072uRZ2a6okV4m0fyjY4sb?si=7b82ae3b073847f6",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 113,
+    texto: "Hay dias que no se que escribir, mi mente divaga entre todo lo vivido. Te amo.",
+    cancion: {
+      titulo: "Sal Rosa",
+      url: "https://open.spotify.com/intl-es/track/1TWAUx1pXxA5XxJmHMGT0b?si=770a71d2f0dd46dd",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 114,
+    texto: "Me acabo de dar cuenta que entre todas las notas no eh expresado lo que siento por ti, eh dicho lo que pasa, lo que siento y como vivo pero creo yo que no te eh dicho el amor que siento.",
+    cancion: {
+      titulo: "Agosto",
+      url: "https://open.spotify.com/intl-es/track/0wihfILRNOwE2156Shezc8?si=5c8c01f0e04442ed",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 115,
+    texto: "Eres el amor de mi vida, te quiero, te amo, te extraño, no cabe duda que eres lo que mas quiero.",
+    cancion: {
+      titulo: "La Bachata",
+      url: "https://open.spotify.com/intl-es/track/3tt9i3Hhzq84dPS8H7iSiJ?si=814edd7dcc124056",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 116,
+    texto: "Me gustastes por muchos sentidos, pero el mas importante fue la forma en que conectamos, nuestra vibra era ten genuina que encajamos el uno con el otro.",
+    cancion: {
+      titulo: "Me Olvide De Los 2",
+      url: "https://open.spotify.com/intl-es/track/02qcrVQ61nS94wWvLaiXGf?si=92a221c8e88d41d5",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 117,
+    texto: "Quiero ser a quien buscas cuando tengas un problema, estoy para ti cuando mas lo necesites.",
+    cancion: {
+      titulo: "Olimpo",
+      url: "https://open.spotify.com/intl-es/track/6tt6JnKerLnOL0oez9QPqS?si=d6e2211a423d4fcf",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 118,
+    texto: "No se si este me hace menos hombre o no, pero este soy yo, alguien que realmente siente pero no sabe como expresarlo.",
+    cancion: {
+      titulo: "La Canción",
+      url: "https://open.spotify.com/intl-es/track/0fea68AdmYNygeTGI4RC18?si=3e91c529119e4ff5",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 119,
+    texto: "Me gustaria odiarte pero no hay forma de que esto pase, simplemente no puedo pero tampoco puede verte como una persona mas y hablarte como si nada, porque aun te quiero demasiado.",
+    cancion: {
+      titulo: "Pa' Olvidarme De Ella",
+      url: "https://open.spotify.com/intl-es/track/3lR4O0vtkhCAvVEUEWUL0S?si=1a516ca24bf747a0",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 120,
+    texto: "4 meses pasan volando 2 meses mas y pasara medio año sin ti, aun no puedo creerlo que eh vivido tanto si ti.",
+    cancion: {
+      titulo: "Cosas Que No Te Dije",
+      url: "https://open.spotify.com/intl-es/track/5xSt1wxZobFcLzHrFakv6z?si=74795ea5c1144b62",
+    },
+    rotacion: -1.5,
+  },
+  
 ];

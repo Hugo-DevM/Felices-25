@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { type Nota, NOTAS } from "./notas";
 
 type NoteStatus = { leida: boolean; cancionEscuchada: boolean };
@@ -256,6 +256,104 @@ function NotaCard({
   );
 }
 
+function CancionDeFondo() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = 0.35;
+
+    const tryPlay = () => audio.play().catch(() => {});
+
+    // Los navegadores bloquean el autoplay con sonido hasta que hay
+    // una interacción: si falla, arrancamos en el primer gesto.
+    const events = ["pointerdown", "keydown", "touchstart", "scroll"] as const;
+    const onFirstGesture = () => {
+      tryPlay();
+      events.forEach((e) => window.removeEventListener(e, onFirstGesture));
+    };
+
+    audio.play().catch(() => {
+      events.forEach((e) =>
+        window.addEventListener(e, onFirstGesture, { once: true, passive: true })
+      );
+    });
+
+    return () => {
+      events.forEach((e) => window.removeEventListener(e, onFirstGesture));
+    };
+  }, []);
+
+  function toggle() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) audio.play().catch(() => {});
+    else audio.pause();
+  }
+
+  return (
+    <>
+      <audio
+        ref={audioRef}
+        src="/Eclipsis.mp3"
+        loop
+        preload="auto"
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onEnded={(e) => {
+          // Respaldo por si el loop nativo no dispara
+          const el = e.currentTarget;
+          el.currentTime = 0;
+          el.play().catch(() => {});
+        }}
+      />
+
+      <motion.button
+        onClick={toggle}
+        aria-label={playing ? "Pausar canción" : "Reproducir canción"}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed top-4 right-4 z-50"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "7px",
+          padding: "7px 14px",
+          borderRadius: "500px",
+          border: "1.5px solid var(--color-terracotta)",
+          background: "oklch(98.5% 0.018 78 / 0.85)",
+          backdropFilter: "blur(6px)",
+          color: "var(--color-terracotta)",
+          fontSize: "0.72rem",
+          fontStyle: "normal",
+          letterSpacing: "0.04em",
+          cursor: "pointer",
+          boxShadow: "0 2px 12px oklch(32% 0.115 10 / 0.10)",
+        }}
+      >
+        <motion.span
+          style={{ fontSize: "0.9rem", lineHeight: 1 }}
+          animate={playing ? { scale: [1, 1.18, 1] } : { scale: 1 }}
+          transition={
+            playing
+              ? { duration: 1.6, repeat: Infinity, ease: "easeInOut" }
+              : { duration: 0.2 }
+          }
+        >
+          {playing ? "♪" : "♫"}
+        </motion.span>
+        {playing ? "Eclipsis" : "Reproducir"}
+      </motion.button>
+    </>
+  );
+}
+
 const DEFAULT_STATUS: NoteStatus = { leida: false, cancionEscuchada: false };
 
 export default function NotasPage() {
@@ -309,6 +407,8 @@ export default function NotasPage() {
           "radial-gradient(ellipse 140% 90% at 50% 20%, oklch(97.2% 0.013 78) 0%, oklch(91% 0.055 18) 100%)",
       }}
     >
+      <CancionDeFondo />
+
       <motion.div
         className="w-full max-w-xl pt-6 md:fixed md:top-6 md:left-6 md:w-auto md:pt-0"
         initial={{ opacity: 0 }}
