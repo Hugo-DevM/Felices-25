@@ -143,10 +143,10 @@ export const NOTAS: Nota[] = [
   {
     id: 14,
     texto:
-      "Si llegaras a ver esto, es una nota por cada dia que no estoy a tu lado, lo se voy tarde.",
+      "Jamas habia deseado tener algo, algo como tu.",
     cancion: {
-      titulo: "Labios rotos",
-      url: "https://open.spotify.com/track/1nULBrlzWatdcjA2ZctIMv?si=35415868a4c34581",
+      titulo: "1 AM",
+      url: "https://open.spotify.com/intl-es/track/3jpkwuGCYK04265C1M11W6?si=4000aae207644070",
     },
     rotacion: -1.5,
   },
@@ -192,7 +192,7 @@ export const NOTAS: Nota[] = [
   {
     id: 19,
     texto:
-      "Volvi a pasar otro 14 de febrero sin nadie y esta tan entusiasmado en poder pasarlo contigo.",
+      "Volvi a pasar otro 14 de febrero sin nadie y estaba tan entusiasmado en poder pasarlo contigo.",
     cancion: {
       titulo: "Amor Completo",
       url: "https://open.spotify.com/track/00kIWJu9IHiQ6i0qJAU0Z9?si=2d9c1d4099994793",
@@ -301,7 +301,7 @@ export const NOTAS: Nota[] = [
   {
     id: 30,
     texto:
-      "Hoy pense mucho mas que otro dias, por todo lo que sucedio en vallarta, que sera de ti?.",
+      "Hoy te pense mucho mas que otro dias, por todo lo que a sucedio en vallarta, que sera de ti?.",
     cancion: {
       titulo: "Dueles",
       url: "https://open.spotify.com/track/1iRvhKiXRElIH2Uf4gd95P?si=de5d7e8ab44d4e0f",
@@ -420,7 +420,7 @@ export const NOTAS: Nota[] = [
   {
     id: 42,
     texto:
-      "Hablando de la primera vez, solo fuimos a las nives por que tu querias porque no es que caiga muy bien los lacteos pero al final de eso importo.",
+      "Hablando de la primera vez, solo fuimos a las nieves por que tu querias porque no es que caiga muy bien los lacteos pero al final de eso no importo.",
     cancion: {
       titulo: "Melón Vino",
       url: "https://open.spotify.com/track/5uHAzGa4d9j35DEbhUwGhi?si=69456bcf702049c1",
@@ -430,7 +430,7 @@ export const NOTAS: Nota[] = [
   {
     id: 43,
     texto:
-      "Me quede con ganas de ir a la playa contigo apesar de que no me gusta para nada ir",
+      "Me quede con ganas de ir a la playa contigo apesar de que no me gusta para nada ir.",
     cancion: {
       titulo: "Morfeo",
       url: "https://open.spotify.com/track/297Ev6aeDHc8dECDmK7SFH?si=d6651cb2f14c4532",
@@ -479,7 +479,7 @@ export const NOTAS: Nota[] = [
   },
   {
     id: 48,
-    texto: "Tu vas a ser mi mujer",
+    texto: "Tu vas a ser mi mujer.",
     cancion: {
       titulo: "Tres Botellas",
       url: "https://open.spotify.com/track/2CshODtf7iwe3pKlPmEWF5?si=e2797115e5d845fa",
@@ -528,7 +528,7 @@ export const NOTAS: Nota[] = [
   {
     id: 53,
     texto:
-      "Queria pasar año nuevo contigo, queria tener terminar y empezar el año contigo.",
+      "Queria pasar año nuevo contigo, queria terminar y empezar el año contigo.",
     cancion: {
       titulo: "Una Cerveza",
       url: "https://open.spotify.com/track/0lbDzTINTToToBpkrnQT2t?si=3885ab79d8934b82",
@@ -547,7 +547,7 @@ export const NOTAS: Nota[] = [
   },
   {
     id: 55,
-    texto: "Pase por tu trabajo aprosito pero me dio miedo voltear",
+    texto: "Pase por tu trabajo aprosito pero me dio miedo voltear.",
     cancion: {
       titulo: "Lo Que Hay X Aquí",
       url: "https://open.spotify.com/track/5IlLm20JXhKbMtsH20NblC?si=5bbe6ddac9bc4b2b",
@@ -557,7 +557,7 @@ export const NOTAS: Nota[] = [
   {
     id: 56,
     texto:
-      "Tambien recuerdo tomar la foto de la nieva para que supieras que fui y asi fue",
+      "Tambien recuerdo tomar la foto de la nieve para que supieras que fui y asi fue.",
     cancion: {
       titulo: "Vamos A Mirarnos",
       url: "https://open.spotify.com/track/63Prex3xLlSgwHk3jN7Ezt?si=3823d3c21d01489a",
@@ -650,7 +650,7 @@ export const NOTAS: Nota[] = [
   },
   {
     id: 66,
-    texto: "Fui a la playa yo solo, quizas fui porque era que tenia planeado contigo y aunque detesto ir lo disfrute como si estuvieras conmigo.",
+    texto: "Fui a la playa yo solo, quizas fui porque era algo que tenia planeado contigo y aunque detesto ir lo disfrute como si estuvieras conmigo.",
     cancion: {
       titulo: "DtMF",
       url: "https://open.spotify.com/track/3sK8wGT43QFpWrvNQsrQya?si=b5b81ae19f584148",
@@ -1028,7 +1028,7 @@ export const NOTAS: Nota[] = [
   },
   {
     id: 108,
-    texto: "Quiero volver contigo, no porque espero ver a tu ser de antes si no porque espero ver al ser de ahora, porque estoy seguro que me enamoraria de ti una vez mas.",
+    texto: "Hoy fue mi cumpleaños, no estuviste aqui, me senti algo vacio y recibir tus felicitaciones solo porque subi fotos me dolio un poco, realmente era mejor no recibir nada a eso porque se sintio la distancia entre nosotros dos.",
     cancion: {
       titulo: "Tiroteo",
       url: "https://open.spotify.com/intl-es/track/05HpBFLrHBjWpgV0DSPUAv?si=e942a8d1e827467c",
@@ -1140,6 +1140,276 @@ export const NOTAS: Nota[] = [
     cancion: {
       titulo: "Cosas Que No Te Dije",
       url: "https://open.spotify.com/intl-es/track/5xSt1wxZobFcLzHrFakv6z?si=74795ea5c1144b62",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 121,
+    texto: "Dejame amarte una vez mas, te juro que te hare la mujer mas feliz.",
+    cancion: {
+      titulo: "Pa' Ti",
+      url: "https://open.spotify.com/intl-es/track/3kAHfdMoCnZ3JKV2dqsGPL?si=9429760d28294ee4",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 122,
+    texto: "Quiero volver contigo, no porque espero ver a tu ser de antes si no porque espero ver al ser de ahora, porque estoy seguro que me enamoraria de ti una vez mas.",
+    cancion: {
+      titulo: "Luna",
+      url: "https://open.spotify.com/intl-es/track/3RA55zrRkyPK8Fd86hrMy8?si=24178244804c4dee",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 123,
+    texto: "Eh estado preparando tu regalo de cumpleaños, la verdad no se si dartelo o no, no se que pasara y eso me da ansiedad.",
+    cancion: {
+      titulo: "Volando",
+      url: "https://open.spotify.com/intl-es/track/0G2zPzWqVjR68iNPmx2TBe?si=4819ae074e3143ec",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 124,
+    texto: "Estoy demasiado ansioso, ya quiero que sean las 12 para mandarlo al instante, eh estado pendiente a la hora para ser el primero.",
+    cancion: {
+      titulo: "Oye Mi Amor",
+      url: "https://open.spotify.com/intl-es/track/5EJ2THuhAapEIeQOtXUQ0x?si=3322ea46acdf4ca9",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 125,
+    texto: "Por fin lo hice, pero me dolio ver lo que pusiste, segun yo hice esto para terminar esta etapa, pero es imposible, tu jamas fuiste una etapa, viniste para quedarte en mi vida.",
+    cancion: {
+      titulo: "Ojalá",
+      url: "https://open.spotify.com/intl-es/track/1IpzwwhCo2eoCyecfhDqt2?si=90d68bc7cbb04c82",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 126,
+    texto: "Realmente me puse mal, no esperaba que dijeras nada, solo era algo que yo queria hacer pero perdi mi estabilidad jajaja que ironico.",
+    cancion: {
+      titulo: "Estoy Bien",
+      url: "https://open.spotify.com/intl-es/track/6szg6z5MWZKiojwcu5hRNX?si=643c745a803d420f",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 127,
+    texto: "Aun debo seguir en pie ya sea contigo o si ti.",
+    cancion: {
+      titulo: "Mi Jardín",
+      url: "https://open.spotify.com/intl-es/track/4MvzIgkHrsYCein80Dmtrw?si=517fcc5ca2964447",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 128,
+    texto: "Los dias que vengan seran mas duros porque el golpe de antes fue duro.",
+    cancion: {
+      titulo: "Gustarme Tanto",
+      url: "https://open.spotify.com/intl-es/track/4fUuE0PAqk8WlVZBBbRUw3?si=3970cd265b904800",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 129,
+    texto: "No sabes las ganas que tengo de abrazarte, quiero estar junto a ti, pegado a ti.",
+    cancion: {
+      titulo: "Lento",
+      url: "https://open.spotify.com/intl-es/track/4uBtsdMMC7toM7DFV08uie?si=f46b5c80e61249ae",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 130,
+    texto: "Extraño tus manos, tu cara, tus labios, tu cintura, tus ojos, tu risa, extraño todo de ti amor.",
+    cancion: {
+      titulo: "12x3",
+      url: "https://open.spotify.com/intl-es/track/1k94CNfVliqDs0qYhkG8iV?si=a5bfddfea91641a6",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 131,
+    texto: "Han pasado tantas cosas que me hubiera gustado compartir contigo.",
+    cancion: {
+      titulo: "San Lucas",
+      url: "https://open.spotify.com/intl-es/track/3aZxnqYFM8UI2jLgUD3B2a?si=c228909a01a945b5",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 132,
+    texto: "Quiero tener una hija con tus genes, eres la mujer mas hermosa que han visto mis ojos y que es mejor que tenerte a ti que en mini.",
+    cancion: {
+      titulo: "Suficiente",
+      url: "https://open.spotify.com/intl-es/track/4Q1jDNoMRYdF9JLhRvuRUZ?si=21fcdc4508724fd4",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 133,
+    texto: "Como quisiera estar en la uni y verte de casualidad, la verdad eh buscado una forma de que eso pase.",
+    cancion: {
+      titulo: "Sin Medias Tintas",
+      url: "https://open.spotify.com/intl-es/track/0xM0fCKQsuOuvehwLgMdVx?si=a21718d51a3a4489",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 134,
+    texto: "Que ironia pormete triste con recuerdos felices.",
+    cancion: {
+      titulo: "Stop The World",
+      url: "https://open.spotify.com/intl-es/track/2QUlMbvD9bL8wHqfsoqoet?si=687b0b865b614700",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 135,
+    texto: `Como dice Mario Benedetti "El peor error del ser humano es intentar sacar de la cabeza lo que no sale del corazón". `,
+    cancion: {
+      titulo: "Locos",
+      url: "https://open.spotify.com/intl-es/track/3GSMdtJphymHEsR8K9jT5Q?si=28945dd831574495",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 136,
+    texto: "Es simple, aun te amo, aun te quiero, aun te necesito porque al final de cuentas, eras mi felicidad.",
+    cancion: {
+      titulo: "Brillas",
+      url: "https://open.spotify.com/intl-es/track/0SRddBTphQwQcfqw4Br1uX?si=e08b06d3f17344e9",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 137,
+    texto: "Podre querer a muchas personas, pero amar? solo puedo amarte a ti y a nadie mas.",
+    cancion: {
+      titulo: "Solo Por Vos",
+      url: "https://open.spotify.com/intl-es/track/0qhynIDQPUYENhtIQ3TUyE?si=1788d50e1b5e4886",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 138,
+    texto: "Solo busco una pequeña señal de tu parte para volver a ser felices.",
+    cancion: {
+      titulo: "Mamichula",
+      url: "https://open.spotify.com/intl-es/track/0TUW9faHNaBmi89wsYGp9y?si=7d8fac86f72e4105",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 139,
+    texto: "Que nos detiene para estar juntos nuevamente.",
+    cancion: {
+      titulo: "Cicuta",
+      url: "https://open.spotify.com/intl-es/track/5ynCoWipwAVsS5ObUJSb8W?si=e5c8f21bb1ec441d",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 140,
+    texto: "Jamas pense que tendria tantas cosas que decir, estoy mas cerca de pensar en ti medio año.",
+    cancion: {
+      titulo: "Perfecta",
+      url: "https://open.spotify.com/intl-es/track/09QfIIP4NUx4A3thmovb2o?si=e52c920a022f4c59",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 141,
+    texto: "Puedo decirte que soy la mejor opción para ti, pero para ser sincero siempre habra alguien mejor pero lo que te ofresco es lo mas sincero y especial.",
+    cancion: {
+      titulo: "Es Que Yo Te Quiero A Ti",
+      url: "https://open.spotify.com/intl-es/track/6noNXh0HLbx1zWPMuhiAPt?si=5f7bca854e9f4af5",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 142,
+    texto: "Me burlo de un amigo que solo habla de su ex y que no puede olvidarla, si supieran lo que sufro yo en silencio.",
+    cancion: {
+      titulo: "Los Malaventurados No Lloran",
+      url: "https://open.spotify.com/intl-es/track/0R6s0WCBfgQ2dByPFSBh63?si=09d8c685f360461e",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 143,
+    texto: "Hoy vi una pareja en la calle que me recordó a nosotros, me dio mucha envidia.",
+    cancion: {
+      titulo: "Entre Nosotros",
+      url: "https://open.spotify.com/intl-es/track/5LazbgCsa2IskJbPMnI8Qd?si=6a8a41cc5e6a4dc6",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 144,
+    texto: "Se me han ocurrido tantas cosas para tener citas, lo malo? solo se quedaran en mi mente.",
+    cancion: {
+      titulo: "Tu Alejas Mas De Mi",
+      url: "https://open.spotify.com/intl-es/track/62xokumU0wMqOSsBuefhmB?si=f979a16a914a4be1",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 145,
+    texto: "Ultimamente no soporto ver a parejas felices.",
+    cancion: {
+      titulo: "Karmadame",
+      url: "https://open.spotify.com/intl-es/track/1xO5aVaGg8ksIuH1TL9Ba3?si=3bcdd1262e4441d4",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 146,
+    texto: "Aun recuerdo tu pelo sin peinar del dia de la conferencia.",
+    cancion: {
+      titulo: "Si Supieras",
+      url: "https://open.spotify.com/intl-es/track/0bRo3KV2Ocmpa7N6HWEyiH?si=3367228b3f6148a1",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 147,
+    texto: "Si supieras que mis ojos nunca se despegaron de ti, que solo queria verte a pesar de que no eramos aun nada.",
+    cancion: {
+      titulo: "Como Tú",
+      url: "https://open.spotify.com/intl-es/track/05neYxc9nmlxJ7uTOZPlnq?si=aef46e7064ba4747",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 148,
+    texto: "Creo que eh tomado una desicion, esto durara solo 1 año y el ultimo dia recibiras la notificacion de la ultima nota, a menos que te des cuenta antes.",
+    cancion: {
+      titulo: "Soñe",
+      url: "https://open.spotify.com/intl-es/track/2VhJ4nrPorAbySEgO4V0BS?si=7a41662022684b5c",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 149,
+    texto: "Aunque esto solo dure un año y aun no estemos juntos mi amor jamas desaparecera.",
+    cancion: {
+      titulo: "Alguien Como Tu",
+      url: "https://open.spotify.com/intl-es/track/2qXwXciJwW4Qdg7KDesOCQ?si=d16d9d2f06f84ec1",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 150,
+    texto: "Sigo sin poder pensar que estamos a 30 dias mas para estar medio año lejos tu y yo, si me memoria los primeros dias.",
+    cancion: {
+      titulo: "Amor Viejo",
+      url: "https://open.spotify.com/intl-es/track/3W5h65cRwTaZ1FCvEw6Ltx?si=cc24dab2d76b4838",
     },
     rotacion: -1.5,
   },
