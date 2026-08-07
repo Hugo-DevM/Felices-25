@@ -1413,5 +1413,51 @@ export const NOTAS: Nota[] = [
     },
     rotacion: -1.5,
   },
+  {
+    id: 151,
+    texto: "Pensaba llevar esto hasta el año pero creo que ya no sera necesario llegar a ese punto, lo de hoy fue quizas lo que necesitaba para saber que ya no existo en esta vida.",
+    cancion: {
+      titulo: "Meteora",
+      url: "https://open.spotify.com/intl-es/track/6o46hCPUBAuEJi3G13VX8k?si=1fd4085b7f6d485d",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 152,
+    texto: "Aun que aun faltan 46 notas mas para llevar las cuentas bien hoy 6 de agosto se acaba.",
+    cancion: {
+      titulo: "Un Poco Bien, Un Poco Mal",
+      url: "https://open.spotify.com/intl-es/track/1YjHKVIAFUuWQxhLMgSI8I?si=e34e290bdfca4412",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 153,
+    texto: "Jamas pense que nuestra primera cita en el cine seria el cierre de esto, verte con otro en el cine me destrozo, de todos los dias posibles ese mismo dia teniamos que ir a la misma funcion y a la misma hora, aunque tu ibas con alguien a quien ya amas y yo solo iba solo sin ti.",
+    cancion: {
+      titulo: "Nubia",
+      url: "https://open.spotify.com/intl-es/track/47MqMH2qUwlfHXS64FEzuE?si=7d6d6a6b6bc54527",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 154,
+    texto: "Aqui termina todo, todo lo que soñe, todo lo que desee y aunque pensaba hacerte saber sobre las notas creo que ya no es necesario, solo te digo una cosa mas si es que lo llegas a ver, no me hables, porque lo haces como si fueramos amigos, como si quedamos bien en las mejores condiciones cuando no es asi, no quedamos bien, ni en lo mas minimo, te detesto con toda mi alma, ahora ya dudo sobre todo lo que decian de ti y aun asi no hice caso, ya no se cual de todas es la verdad, pero aun asi TE AMO con toda mi alma, pero creo que tendre que mirar hacia otro lado para seguir con mi vida, escribo esto desde el fondo de mi corazon, desde la tristesa, llorando porque de alguna u otra forma me afecto bastante mas de lo que llegue a imaginar y aunque sigo teniendo esperanzas de algo que no va pasar.",
+    cancion: {
+      titulo: "Si Te Vas",
+      url: "https://open.spotify.com/intl-es/track/7h2g1OWwyuqtXOphBs0maG?si=dfece8341a4b42af",
+    },
+    rotacion: -1.5,
+  },
+  {
+    id: 155,
+    texto: "Te Amo",
+    cancion: {
+      titulo: "Días Mágicos",
+      url: "https://open.spotify.com/intl-es/track/677i5WdG0By0lWuWsFiu0q?si=e064fbd787544d57",
+    },
+    rotacion: -1.5,
+  },
+  
   
 ];
